@@ -13,11 +13,9 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Hafize Güngör # add your name
 author-img: hafize.jpg # add your photo
 about-author: Computer Engineer. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
 social-github: gungorhafize # add your Github handle
-social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-linkedin: hafize güngör # add your Linkedin handle
+social-email:  # add your Email address
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
