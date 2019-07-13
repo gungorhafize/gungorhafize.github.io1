@@ -32,7 +32,7 @@ analytics: # Google Analytics
  hard_wrap: false
  future: true
  jailed: false
- theme: flexible-jekyll
+ theme: gungorhafize.github.io
  gfm_quirks: paragraph_end
 markdown: kramdown
 plugins:
