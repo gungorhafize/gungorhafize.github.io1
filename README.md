@@ -1,1 +1,0 @@
-# gungorhafize.github.io
