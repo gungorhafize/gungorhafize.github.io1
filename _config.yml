@@ -26,6 +26,15 @@ discus-identifier: mr-brown # add your discus identifier
 analytics: # Google Analytics
 
 # Build Settings
+ github: [metadata]
+ encoding: UTF-8
+ kramdown:
+ input: GFM
+ hard_wrap: false
+ future: true
+ jailed: false
+ theme: flexible-jekyll
+ gfm_quirks: paragraph_end
 markdown: kramdown
 plugins:
   - jekyll-sitemap
