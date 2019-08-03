@@ -3,7 +3,7 @@ layout: post
 title: Temiz Kodlama Rehberi
 date: 2019-07-15 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: ![code](https://user-images.githubusercontent.com/33956266/62415934-bd316480-b63a-11e9-8eee-4edb5383befb.JPG)
+img: code.jpg
  # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Clean-coding, TemizKodlama]
