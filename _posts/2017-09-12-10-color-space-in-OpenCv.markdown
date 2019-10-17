@@ -3,7 +3,7 @@ layout: post
 title: Color Spaces in Opencv 
 date: 2017-09-12 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: workflow.jpg # Add image post (optional)
+img: red-green-and-blue-eye.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Python, Opencv, colorspaces, color, hsv, rgb] # add tag
 ---
