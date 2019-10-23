@@ -22,7 +22,10 @@ Bilgisayarla görü ve görüntü işlemede, renk uzayı, renkleri düzenlemenin
 OpenCV’de 150'den fazla renk uzayı dönüştürme yöntemi bulunmaktadır. En popüler renk uzaylarından bazıları RGB nam-ı diğer BGR, YUV, HSV…
 En yaygın renk uzayı RGB: Her piksel için 3 bayt veri 3 farklı bölüme ayrılmıştır: kırmızı miktar için bir bayt, yeşil için bir ve üçüncüsü mavi için bir bayt… Ana renkler olan kırmızı, yeşil ve mavi herhangi bir rengi oluşturmak için farklı oranlarda olabilir. 256 farklı kırmızı, yeşil ve mavi tonumuz vardır. 1 bayt, 0 ile 255 arasında bir değer saklayabilir. Böylece bu renkleri farklı oranlarda karıştırır ve istediğiniz rengi elde etmiş oluruz. Bu renk uzayı oldukça sezgiseldir.
 
-![rgb](https://user-images.githubusercontent.com/33956266/67438510-64031c80-f5fc-11e9-908b-8503a36f7c77.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438510-64031c80-f5fc-11e9-908b-8503a36f7c77.png">
+</p>
+
 ![rgb2](https://user-images.githubusercontent.com/33956266/67438533-7a10dd00-f5fc-11e9-8732-9a260b3c6511.jpeg)
 
 OpenCV, en gelişmiş teknikleri kullanarak Computer Vision için harika bir kütüphanedir ve Windows, Linux, Mac ve hatta iPhone dahil olmak üzere birçok İşletim Sisteminde kullanılabilir. Ana renk formatı RGB’dir fakat aslında RGB’nin baytları olan ve verimlilik için 4. byte’lık bir bayt olan BGRX’dir ancak genel olarak basitlik için RGB olarak adlandırılır. Ayrıca RGB’den HSV’ye veya YUV veya LAB veya XYZ’ye dönüştürmek gibi farklı renk formatlarıyla çalışmak için çeşitli fonksiyonlar da içerir. Ancak OpenCV’nin HSV formatı beklediğinizden farklı!
