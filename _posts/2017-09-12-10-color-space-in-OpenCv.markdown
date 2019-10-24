@@ -26,6 +26,22 @@ Bilgisayarla görü ve görüntü işlemede, renk uzayı, renkleri düzenlemenin
 OpenCV’de 150'den fazla renk uzayı dönüştürme yöntemi bulunmaktadır. En popüler renk uzaylarından bazıları RGB nam-ı diğer BGR, YUV, HSV…
 En yaygın renk uzayı RGB: Her piksel için 3 bayt veri 3 farklı bölüme ayrılmıştır: kırmızı miktar için bir bayt, yeşil için bir ve üçüncüsü mavi için bir bayt… Ana renkler olan kırmızı, yeşil ve mavi herhangi bir rengi oluşturmak için farklı oranlarda olabilir. 256 farklı kırmızı, yeşil ve mavi tonumuz vardır. 1 bayt, 0 ile 255 arasında bir değer saklayabilir. Böylece bu renkleri farklı oranlarda karıştırır ve istediğiniz rengi elde etmiş oluruz. Bu renk uzayı oldukça sezgiseldir.
 
+```python 
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+img = cv2.imread('color.png',1)
+b,g,r = cv2.split(img)
+cv2.imshow('Blue Channel',b)
+cv2.imshow('Green Channel',g)
+cv2.imshow('Red Channel',r)
+img=cv2.merge((b,g,r))
+cv2.imshow('Merged Output',img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438510-64031c80-f5fc-11e9-908b-8503a36f7c77.png">
 </p>
