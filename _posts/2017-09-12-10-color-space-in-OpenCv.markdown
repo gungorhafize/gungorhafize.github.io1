@@ -17,7 +17,9 @@ Basit bir şekilde gri tonlamalı bir görüntü düşünelim. Gri tonlamalı bi
   
 Gri tonlamalı bir görüntü için ihtiyacınız olan tek şey, her piksel için bir bayt. Bir bayt veya 8 bit, 0 ile 255 arasında bir değer depolayabilir ve tüm olası gri tonlarını kapsar. Böylece, bellekte gri tonlamalı bir görüntü iki boyutlu bir bayt dizisi ile temsil edilir. Dizinin boyutu görüntünün yüksekliğine ve genişliğine eşittir. Teknik olarak, bu dizi “kanal” dır. Dolayısıyla, gri tonlamalı bir görüntünün yalnızca bir kanala sahip olduğunu. Ve bu kanal beyazların yoğunluğunu temsil ediyor.
 
-![gri2](https://user-images.githubusercontent.com/33956266/67438490-4cc42f00-f5fc-11e9-898c-08310eea2a46.jpeg)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438490-4cc42f00-f5fc-11e9-898c-08310eea2a46.jpeg">
+</p>
 
 Renk eklendiğinde ise işler daha da zorlaşıyor. Artık bellekte daha fazla bilgi saklanmakta… Saydam olmayan bir görüntü 16,581,375 (yaklaşık 16 milyon civarında) farklı rengi destekler. Bu farklı renk tonlarını ayırt edebilmek için, her piksel için 3 bayta ihtiyacımız var ( veya 24 bit). Şimdi şunu düşünelim; farklı renk tonlarına atamak için 16 milyon numaramız var. Her sayıya rastgele renk atamış ise, işler git gide garipleşir. Örneğin, 1= en parlak kırmızı, 2 = en parlak yeşil, 95760 = en koyu sarı… gibi. Böylece insanlar sistematik olarak yaklaşık 16 milyon renk sayılarına numaralar atamak için farklı “renk uzaylarını” buldular.
 Bilgisayarla görü ve görüntü işlemede, renk uzayı, renkleri düzenlemenin bir yolunu ifade eder. Renk uzayı aslında renk modeli ve haritalama fonksiyonun birleşimidir. Renk modellerini istememizin aslında nedeni, tuples kullanarak piksel değerlerini temsil etmemize yardımcı olmasıdır. Haritalama fonksiyonu renk modelini, gösterilebilecek tüm olası renk kümeleriyle eşleştirir.
@@ -36,6 +38,8 @@ Ayrıca, RGB renkler HSV renk uzayına birkaç farklı yolla dönüştürülebil
 RGB birçok amaç için iyi olsa da, birçok gerçek yaşam uygulaması için çok sınırlı olma eğilimindedir. İnsanlar, yoğunluk bilgisini renk bilgisinden ayırmak için farklı yöntemler düşünmeye başladılar. Böylece, YUV renk uzayı ile geldiler. Y, parlaklığı veya yoğunluğu ifade eder ve U/V kanalları renk bilgisini temsil eder. Bu, birçok uygulamada iyi çalışır, çünkü insan görsel sistemi yoğunluk bilgisini renk bilgisinden çok farklı algılar.
 YUV bile bazı uygulamalar için hala yeterli değildi. Böylece insanlar renkleri nasıl algıladıklarını düşünmeye başladılar ve HSV renk uzayını oluşturdular. HSV, Ton, Doygunluk ve Değer anlamına gelir. Bu, renklerin en temel özelliklerinden üçünü ayırdığımız ve farklı kanallar kullanarak onları temsil ettiğimiz silindirik bir sistemdir. Bu, insan görsel sisteminin rengi nasıl anladığıyla yakından ilgilidir. Bu bize görüntüleri nasıl idare edebileceğimiz konusunda esneklik sağlar.
 
-![hsv](https://user-images.githubusercontent.com/33956266/67438558-8a28bc80-f5fc-11e9-9e13-c37ea8727a96.jpeg)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438558-8a28bc80-f5fc-11e9-9e13-c37ea8727a96.jpeg">
+</p>
 
 Renk uzayları arasında dönüştürmek için cvtColor fonksiyonunu kullanıyoruz. İlk argüman giriş görüntüsüdür ve ikinci argüman renk alanı dönüşümünü belirtir.
