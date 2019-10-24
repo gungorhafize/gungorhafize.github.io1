@@ -11,7 +11,9 @@ tags: [Python, Opencv, colorspaces, color, hsv, rgb] # add tag
 Görüntüler, bellekte farklı renk uzaylarında saklanır. Renk uzaylarından önce, OpenCV’nin veya başka herhangi bir programın (API) görüntüleri RAM’de nasıl sakladığını tam olarak bilmekte fayda var.
 Basit bir şekilde gri tonlamalı bir görüntü düşünelim. Gri tonlamalı bir resim yalnızca yoğunluk bilgisi gerektirir yani belirli bir pikselin ne kadar parlak olduğu bilgisi. Değer ne kadar yüksek olursa yoğunluk o kadar yüksektir.
 
-![gri](https://user-images.githubusercontent.com/33956266/67438459-38803200-f5fc-11e9-96a4-645184067c89.png)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438459-38803200-f5fc-11e9-96a4-645184067c89.png">
+</p>
   
 Gri tonlamalı bir görüntü için ihtiyacınız olan tek şey, her piksel için bir bayt. Bir bayt veya 8 bit, 0 ile 255 arasında bir değer depolayabilir ve tüm olası gri tonlarını kapsar. Böylece, bellekte gri tonlamalı bir görüntü iki boyutlu bir bayt dizisi ile temsil edilir. Dizinin boyutu görüntünün yüksekliğine ve genişliğine eşittir. Teknik olarak, bu dizi “kanal” dır. Dolayısıyla, gri tonlamalı bir görüntünün yalnızca bir kanala sahip olduğunu. Ve bu kanal beyazların yoğunluğunu temsil ediyor.
 
