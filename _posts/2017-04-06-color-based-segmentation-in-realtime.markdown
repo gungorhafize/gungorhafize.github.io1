@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Color Based Segmentation in Real Time Video Appearance
+title: Object Tracking via Color Based Segmentation in Real Time Video Appearance
 date: 2019-07-15 13:32:20 +0300
 description: Color Based Segmentation in Real Time Video Appearance using HSV color range trackbar
 img: i-rest.jpg 
