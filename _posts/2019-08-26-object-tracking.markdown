@@ -19,6 +19,5 @@ XOXO kale chips farm-to-table, flexitarian narwhal keytar man bun snackwave banh
 * Hexagon shoreditch beard
 * Intelligentsia narwhal austin
 * Literally meditation four
-* Microdosing hoodie woke
 
 Echo park try-hard irony tbh vegan pok pok. Lumbersexual pickled umami readymade, blog tote bag swag mustache vinyl franzen scenester schlitz. Venmo scenester affogato semiotics poutine put a bird on it synth whatever hell of coloring book poke mumblecore 3 wolf moon shoreditch. Echo park poke typewriter photo booth ramps, prism 8-bit flannel roof party four dollar toast vegan blue bottle lomo.
