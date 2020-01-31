@@ -8,7 +8,6 @@ fig-caption: # Add figcaption (optional)
 tags: [OpenCv, Digital Image Processing, detection, color, hsv, bgr]
 ---
 Fam locavore snackwave bushwick +1 sartorial. 
-90's yr crucifix, selvage 8-bit listicle forage cliche shoreditch hammock microdosing synth. Farm-to-table leggings chambray iPhone, gluten-free twee synth kinfolk umami. Whatever single-origin coffee gluten-free austin everyday carry cliche cred. Plaid ramps kitsch woke pork belly organic.
 
 ![I and My friends]({{site.baseurl}}/assets/img/we-in-rest.jpg)
 
