@@ -9,8 +9,6 @@ tags: [OpenCv, Digital Image Processing, detection, color, hsv, bgr]
 ---
 Fam locavore snackwave bushwick +1 sartorial. 
 
-![I and My friends]({{site.baseurl}}/assets/img/we-in-rest.jpg)
-
 Selfies sriracha taiyaki woke squid synth intelligentsia ethical kickstarter art party neutra biodiesel scenester. 
 >Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh.
 
