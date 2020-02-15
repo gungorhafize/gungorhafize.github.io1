@@ -14,7 +14,7 @@ Selfies sriracha taiyaki woke squid synth intelligentsia PBR&B ethical kickstart
 
 >Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh. Artisan glossier yuccie, direct trade photo booth pabst pop-up pug schlitz.
 
-Cronut lumbersexual fingerstache asymmetrical, single-origin coffee roof party unicorn. Intelligentsia narwhal austin, man bun cloud bread asymmetrical fam disrupt taxidermy brunch.
+
 
 * Hexagon shoreditch beard
 * Intelligentsia narwhal austin
