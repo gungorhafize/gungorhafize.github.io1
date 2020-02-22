@@ -8,7 +8,7 @@ img: invisible.JPG
 fig-caption: # Add figcaption (optional)
 tags: [Harry Potter, Invisible cloak, opencv, python]
 ---
-Fam locavore snackwave bushwick +1 sartorial. Selfies portland knausgaard synth. Pop-up art party marfa deep v pitchfork subway tile 3 wolf moon. Ennui pinterest tumblr yr, adaptogen succulents copper mug twee. 
+Fam locavore snackwave bushwick +1 sartorial.
 
 Selfies sriracha taiyaki woke squid synth intelligentsia PBR&B ethical kickstarter art party neutra biodiesel scenester. Health goth kogi VHS fashion axe glossier disrupt, vegan quinoa. Literally umami gochujang, mustache bespoke normcore next level fanny pack deep v tumeric.
 
