@@ -10,7 +10,7 @@ Post-ironic jean shorts bushwick umami, synth beard austin hell of meh kitsch di
 
 >Tattooed pour-over taiyaki woke, skateboard subway tile PBR&B etsy distillery street art pok pok wolf 8-bit. Vegan bicycle rights schlitz subway tile unicorn taiyaki.
 
-Meditation literally adaptogen locavore artisan polaroid occupy sriracha bitters gochujang kale chips mixtape. Actually tumblr etsy hammock brunch prism locavore retro next level yuccie subway tile waistcoat crucifix.
+Meditation literally adaptogen locavore artisan polaroid occupy sriracha bitters gochujang kale chips mixtape.
 
 Adaptogen retro 8-bit mlkshk echo park hammock godard venmo flannel tilde umami enamel pin trust fund single-origin coffee etsy. Hell of williamsburg jianbing fanny pack af, biodiesel jean shorts four dollar toast bitters kickstarter.
 
