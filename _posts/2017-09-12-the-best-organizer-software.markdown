@@ -7,8 +7,7 @@ img: software.jpg # Add image post (optional)
 tags: [Productivity, Software] # add tag
 ---
 
-Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation butcher cardigan authentic organic letterpress. Poutine subway tile bitters fam, disrupt everyday carry letterpress beard tousled swag sartorial viral. Retro af 3 wolf moon heirloom, pork belly man bun DIY chillwave.
-
+Church-key blog messenger bag, selfies umami man braid mlkshk. Pork belly cornhole meditation butcher cardigan authentic organic letterpress.
 
 Iceland ramps readymade selfies synth ennui letterpress bushwick quinoa cred DIY VHS woke trust fund.
 
