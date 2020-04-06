@@ -16,4 +16,4 @@ Small batch locavore artisan next level wolf wayfarers retro viral pabst kicksta
 
 Pour-over blue bottle woke listicle, pitchfork 90's post-ironic scenester poutine ennui four loko ramps kickstarter..
 
-Everyday try-hard fanny pack thundercats farm-to-table retro twee.
+Everyday try-hard fanny pack thundercats farm-to-table.
