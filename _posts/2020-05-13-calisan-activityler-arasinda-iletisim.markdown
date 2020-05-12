@@ -26,6 +26,8 @@ Ancak, bu sefer iletilen extraData'yı yani yapmak istediğimiz işlemleri işle
 
 Adından da anlaşıldığı gibi, activity oluşturulduğunda çalışır (onCreate) ve bu sefer zaten var olduğundan, onNewIntent () adlı yöntem çağrılır.
 
+🚀
+
 ```java
     @Override
     public void onNewIntent(Intent intent) {
@@ -35,14 +37,29 @@ Adından da anlaşıldığı gibi, activity oluşturulduğunda çalışır (onCr
 
     }
  ```
-🧶
-Iceland ramps readymade selfies synth ennui letterpress bushwick quinoa cred DIY VHS woke trust fund.
+ 
+Activity ilk kez oluşturulduğunda ve sistem arka plandaki activityleri kolayca öldürebildiğinden, onCreate'de normal şekilde veri alabileceğimizi unutmayın. Bu durumda, onNewIntent yerine onCreate methodu çağrılır.
 
-Small batch locavore artisan next level wolf wayfarers retro viral pabst kickstarter.🔮
-✨
+Bu nedenle güzel bir çözüm olarak, onData ve onNewIntent'teki niyetten extraData işlemek için aynı işlevi çağırabilir.
 
-### Pour-over blue bottle woke listicle
+🚀
+```java
+ protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        processExtraData();
+}
+ 
+protected void onNewIntent(Intent intent) {
+  super.onNewIntent(intent);
+  setIntent(intent);
+  processExtraData()
+}
+ 
+private void processExtraData(){
+  Intent intent = getIntent();
+  //ne yapmak istiyorsan onu yap
+}
+```
 
-Pour-over blue bottle woke listicle, post-ironic scenester poutine ennui four loko ramps kickstarter..
 
-Everyday try-hard fanny pack thundercats farm-to-table.
