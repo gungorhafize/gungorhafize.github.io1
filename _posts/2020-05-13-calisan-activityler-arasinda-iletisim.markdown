@@ -17,12 +17,24 @@ Bundan kaçınmak için de, activity'nin defalarca başlatılmaması gerektiği 
 
 ```android
 <activity android:name=".MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
             android:label="@string/app_name"
             android:launchMode="singleTop">
 ```
 
+Bu şekilde bu activity'i intent kullanarak çağırdığımızda, mevcut bir instance varsa, sistem request'i buna yönlendirir.
+Ancak, bu sefer iletilen extraData'yı yani yapmak istediğimiz işlemleri işlediğimiz onCreate methodu çalışmaz.
 
+Adından da anlaşıldığı gibi, activity oluşturulduğunda çalışır (onCreate) ve bu sefer zaten var olduğundan, onNewIntent () adlı yöntem çağrılır.
+
+```java
+    @Override
+    public void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        processExtraData();
+
+    }
+ ```
 🧶
 Iceland ramps readymade selfies synth ennui letterpress bushwick quinoa cred DIY VHS woke trust fund.
 
