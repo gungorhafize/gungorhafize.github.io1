@@ -4,7 +4,7 @@ title: Android SDK Version | Çalışan activityler arasında iletişim kurma
 date: 2019-05-13 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: android.png # Add image post (optional)
-tags: [Productivity, Software] # add tag
+tags: [Intent, Android, Software] # add tag
 ---
 
 Başka bir activity başlatmak ve ona bazı verileri iletmek Android'de basit ve temel bir işlemdir.
@@ -58,7 +58,11 @@ protected void onNewIntent(Intent intent) {
  
 private void processExtraData(){
   Intent intent = getIntent();
-  //ne yapmak istiyorsan onu yap
+   String action = intent.getAction();
+        if (Intent.ACTION_VIEW.equals(action)) {
+            Uri uri = intent.getData();
+            if (uri != null) {
+             //ne yapmak istiyorsan onu yap
 }
 ```
 
