@@ -40,7 +40,7 @@ Adından da anlaşıldığı gibi, activity oluşturulduğunda çalışır (onCr
  
 Activity ilk kez oluşturulduğunda ve sistem arka plandaki activityleri kolayca öldürebildiğinden, onCreate'de normal şekilde veri alabileceğimizi unutmayın. Bu durumda, onNewIntent yerine onCreate methodu çağrılır.
 
-Bu nedenle güzel bir çözüm olarak, onData ve onNewIntent'teki niyetten extraData işlemek için aynı işlevi çağırabilir.
+Bu nedenle güzel bir çözüm olarak, processExtraData metodunda intenti alıyoruz ve onNewIntent'teki set ediyor ve yeni intent geldiğinde işlemleri ona göre düzenliyoruz ve bunu son olarak oncreate'de çağırıyoruz.
 
 🚀
 ```java
@@ -63,3 +63,4 @@ private void processExtraData(){
 ```
 
 
+Bu arada sakın ola startActivity(intent) falan yazmayın bir yerlere ki uygulamadan çıkmak gerekir çünkü teşekkürler 🪐🛰😀😋
