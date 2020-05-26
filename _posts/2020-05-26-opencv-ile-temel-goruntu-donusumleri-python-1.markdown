@@ -34,7 +34,9 @@ cv2.waitKey()
 
 Affine dönüşüm matrisini elde etmek için sadece üç noktaya ihtiyacımız var. Sourc_points içindeki üç noktanın dest_points içindeki karşılık gelen noktalarla eşlenmesini istiyoruz. Noktaları aşağıda gösterildiği gibi eşleştiriyoruz:
 
-![affine1](https://user-images.githubusercontent.com/33956266/82948022-aed97e00-9fa9-11ea-8c13-e6801ee12317.jpg)
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/82948022-aed97e00-9fa9-11ea-8c13-e6801ee12317.jpg">
+</p>
 
 2x3 dönüşüm matrisini elde etmek için OpenCV’de getAffineTransform adlı bir fonksiyonumuz var. Affine dönüşüm matrisini elde ettikten sonra, bu matrisi 3x3 input görüntü matrisine uygulamak için warpAffine fonksiyonunu kullandık.
 Giriş görüntüsünün ayna görüntüsünü de alabiliriz. Kontrol noktalarını aşağıdaki şekilde değiştirmemiz gerekiyor:
@@ -43,6 +45,7 @@ Giriş görüntüsünün ayna görüntüsünü de alabiliriz. Kontrol noktaları
 sourc_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
 dest_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
 ```
+
 
 ![affine2](https://user-images.githubusercontent.com/33956266/82948027-b0a34180-9fa9-11ea-94d4-820c699de68e.jpg)
 
