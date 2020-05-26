@@ -7,8 +7,11 @@ img: how-to-start.jpg # Add image post (optional)
 tags: [Programming, Learn] # add tag
 ---
 Geometrik dönüşümler görüntü üzerindeki her pikselin bir konumdan(x,y), başka bir konuma (x2,y2) haritalanmasıdır.
-Affine transformation’dan bahsetmeden önce öklit dönüşümüne bir göz atalım isterim. Öklit dönüşümleri uzunluk ve açı ölçüsünü koruyan bir tür geometrik dönüşümlerdir. Yani biz bir geometrik şekli alır ve ona öklit dönüşümü uygularsak değişmeden kalacaktır. Dönmüş, kaymış, yamulmuş gibi görünebilir ancak temel yapısı değişmez yani bir doğru parçası ise doğru şeklinde, kare ise geometrik şeklimiz kare olarak kalır. Affine dönüşümlerine ise Öklit dönüşümünün genelleşmiş hali diyebiliriz. Ancak burada dikkat
+
+Affine transformation’dan bahsetmeden önce öklit dönüşümüne bir göz atalım isterim. Öklit dönüşümleri uzunluk ve açı ölçüsünü koruyan bir tür geometrik dönüşümlerdir. Yani biz bir geometrik şekli alır ve ona öklit dönüşümü uygularsak değişmeden kalacaktır.
+Dönmüş, kaymış, yamulmuş gibi görünebilir ancak temel yapısı değişmez yani bir doğru parçası ise doğru şeklinde, kare ise geometrik şeklimiz kare olarak kalır. Affine dönüşümlerine ise Öklit dönüşümünün genelleşmiş hali diyebiliriz. Ancak burada dikkat
 edilmesi gereken nokta affine dönüşümlerinde uzunluk ve açılar korunmaz yani bir doğru parçası yine affine dönüşümden sonra doğru parçası olarak hayatına devam ederken, bir kare şeklimiz paralelkenar haline gelebilir.
+
 Affine dönüşüm matrisi oluşturmak için kontrol noktalarını yani check pointleri tanımlamamız gerekir. Bu kontrol noktalarını tanımlandıktan sonra, bunların nerede haritalandırılmasını istediğimize karar vermeliyiz. Bu özel durumda, ihtiyacımız olan tek şey kaynak görüntüde üç nokta ve çıktı görüntüde üç noktadır. Bir görüntüyü paralelkenar benzeri bir görüntüye nasıl dönüştürebileceğimizi görelim:
 
 ```python
@@ -45,6 +48,4 @@ dest_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
 
 ![affinetrans2](https://user-images.githubusercontent.com/33956266/82948036-b6992280-9fa9-11ea-8472-1bfa8e0f948d.JPG)
 
-Adaptogen retro 8-bit mlkshk echo park hammock godard venmo flannel tilde umami enamel pin trust fund single-origin coffee etsy.
-
-Skateboard keytar actually disrupt taiyaki, synth biodiesel. Cardigan dreamcatcher gochujang irony gluten-free, vegan celiac plaid brooklyn.
+Kontrol noktaları değiştikten sonra ayna görünütüsü elde edebildik. Affine dönüşümler güzel fakat bir de Perspective — Projective dönüşümler var ki bir sonraki yazımda ondan bahsediyor olacağım. Keyifli okumalar.🧐
