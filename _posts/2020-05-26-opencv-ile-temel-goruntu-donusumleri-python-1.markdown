@@ -31,9 +31,16 @@ cv2.waitKey()
 
 Affine dönüşüm matrisini elde etmek için sadece üç noktaya ihtiyacımız var. Sourc_points içindeki üç noktanın dest_points içindeki karşılık gelen noktalarla eşlenmesini istiyoruz. Noktaları aşağıda gösterildiği gibi eşleştiriyoruz:
 
->Tattooed pour-over taiyaki woke, skateboard subway tile PBR&B etsy distillery street art pok pok wolf 8-bit. Vegan bicycle rights schlitz subway tile unicorn taiyaki.
+![affine1](https://user-images.githubusercontent.com/33956266/82948022-aed97e00-9fa9-11ea-8c13-e6801ee12317.jpg)
 
-Meditation literally adaptogen locavore artisan polaroid occupy sriracha bitters gochujang kale chips mixtape.
+2x3 dönüşüm matrisini elde etmek için OpenCV’de getAffineTransform adlı bir fonksiyonumuz var. Affine dönüşüm matrisini elde ettikten sonra, bu matrisi 3x3 input görüntü matrisine uygulamak için warpAffine fonksiyonunu kullandık.
+Giriş görüntüsünün ayna görüntüsünü de alabiliriz. Kontrol noktalarını aşağıdaki şekilde değiştirmemiz gerekiyor:
+
+```python
+sourc_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
+dest_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
+```
+
 
 Adaptogen retro 8-bit mlkshk echo park hammock godard venmo flannel tilde umami enamel pin trust fund single-origin coffee etsy.
 
