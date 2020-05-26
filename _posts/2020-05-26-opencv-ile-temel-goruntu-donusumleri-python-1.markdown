@@ -27,6 +27,9 @@ cv2.imshow('Input', img)
 cv2.imshow('Output', img_output)
 cv2.waitKey()
 ```
+![affinetrans](https://user-images.githubusercontent.com/33956266/82947879-6de16980-9fa9-11ea-8b48-ce240a9149ad.JPG)
+
+Affine dönüşüm matrisini elde etmek için sadece üç noktaya ihtiyacımız var. Sourc_points içindeki üç noktanın dest_points içindeki karşılık gelen noktalarla eşlenmesini istiyoruz. Noktaları aşağıda gösterildiği gibi eşleştiriyoruz:
 
 >Tattooed pour-over taiyaki woke, skateboard subway tile PBR&B etsy distillery street art pok pok wolf 8-bit. Vegan bicycle rights schlitz subway tile unicorn taiyaki.
 
