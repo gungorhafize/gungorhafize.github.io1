@@ -11,7 +11,22 @@ Affine transformation’dan bahsetmeden önce öklit dönüşümüne bir göz at
 edilmesi gereken nokta affine dönüşümlerinde uzunluk ve açılar korunmaz yani bir doğru parçası yine affine dönüşümden sonra doğru parçası olarak hayatına devam ederken, bir kare şeklimiz paralelkenar haline gelebilir.
 Affine dönüşüm matrisi oluşturmak için kontrol noktalarını yani check pointleri tanımlamamız gerekir. Bu kontrol noktalarını tanımlandıktan sonra, bunların nerede haritalandırılmasını istediğimize karar vermeliyiz. Bu özel durumda, ihtiyacımız olan tek şey kaynak görüntüde üç nokta ve çıktı görüntüde üç noktadır. Bir görüntüyü paralelkenar benzeri bir görüntüye nasıl dönüştürebileceğimizi görelim:
 
+```python
+import cv2
+import numpy as np
 
+img = cv2.imread('pool.png')
+rows, cols = img.shape[:2]
+
+src_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
+dst_points = np.float32([[0,0], [int(0.6*(cols-1)),0], [int(0.4*(cols-1)),rows-1]])
+affine_matrix = cv2.getAffineTransform(sourc_points, dest_points)
+img_output = cv2.warpAffine(img, affine_matrix, (cols,rows))
+
+cv2.imshow('Input', img)
+cv2.imshow('Output', img_output)
+cv2.waitKey()
+```
 
 >Tattooed pour-over taiyaki woke, skateboard subway tile PBR&B etsy distillery street art pok pok wolf 8-bit. Vegan bicycle rights schlitz subway tile unicorn taiyaki.
 
