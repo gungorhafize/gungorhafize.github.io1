@@ -6,7 +6,8 @@ description:
 img: how-to-start.jpg # Add image post (optional)
 tags: [Programming, Learn] # add tag
 ---
-Geometrik dönüşümler görüntü üzerindeki her pikselin bir konumdan(x,y), başka bir konuma (x2,y2) haritalanmasıdır.
+
+> Geometrik dönüşümler görüntü üzerindeki her pikselin bir konumdan(x,y), başka bir konuma (x2,y2) haritalanmasıdır.
 
 Affine transformation’dan bahsetmeden önce öklit dönüşümüne bir göz atalım isterim. Öklit dönüşümleri uzunluk ve açı ölçüsünü koruyan bir tür geometrik dönüşümlerdir. Yani biz bir geometrik şekli alır ve ona öklit dönüşümü uygularsak değişmeden kalacaktır.
 Dönmüş, kaymış, yamulmuş gibi görünebilir ancak temel yapısı değişmez yani bir doğru parçası ise doğru şeklinde, kare ise geometrik şeklimiz kare olarak kalır. Affine dönüşümlerine ise Öklit dönüşümünün genelleşmiş hali diyebiliriz. Ancak burada dikkat
