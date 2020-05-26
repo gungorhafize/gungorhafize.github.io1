@@ -41,6 +41,9 @@ sourc_points = np.float32([[0,0], [cols-1,0], [0,rows-1]])
 dest_points = np.float32([[cols-1,0], [0,0], [cols-1,rows-1]])
 ```
 
+![affine2](https://user-images.githubusercontent.com/33956266/82948027-b0a34180-9fa9-11ea-94d4-820c699de68e.jpg)
+
+![affinetrans2](https://user-images.githubusercontent.com/33956266/82948036-b6992280-9fa9-11ea-8472-1bfa8e0f948d.JPG)
 
 Adaptogen retro 8-bit mlkshk echo park hammock godard venmo flannel tilde umami enamel pin trust fund single-origin coffee etsy.
 
