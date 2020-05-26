@@ -4,7 +4,7 @@ title: OpenCv ile Temel Geometrik Görüntü Dönüşümleri - 1 | Python
 date: 2020-05-26 00:00:00 +0300
 description: 
 img: how-to-start.jpg # Add image post (optional)
-tags: [Programming, Learn] # add tag
+tags: [OpenCv, Python, ImageProcessing, Görüntü İşleme] # add tag
 ---
 
 > Geometrik dönüşümler görüntü üzerindeki her pikselin bir konumdan(x,y), başka bir konuma (x2,y2) haritalanmasıdır.
