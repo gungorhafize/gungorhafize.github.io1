@@ -3,7 +3,7 @@ layout: post
 title: OpenCv ile Temel Geometrik Görüntü Dönüşümleri - 1 | Python
 date: 2020-05-26 00:00:00 +0300
 description: 
-img: how-to-start.jpg # Add image post (optional)
+img: affin.png # Add image post (optional)
 tags: [OpenCv, Python, ImageProcessing, Görüntü İşleme] # add tag
 ---
 
