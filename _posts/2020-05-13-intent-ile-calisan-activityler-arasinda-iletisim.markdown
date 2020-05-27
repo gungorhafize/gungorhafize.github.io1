@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android SDK Version | Çalışan activityler arasında iletişim kurma
+title: Android| Intent ile çalışan activityler arasında iletişim kurma
 date: 2020-05-13 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: android.png # Add image post (optional)
