@@ -7,7 +7,7 @@ img: android.png # Add image post (optional)
 tags: [Intent, Android, Software] # add tag
 ---
 
-Başka bir activity başlatmak ve ona bazı verileri iletmek Android'de basit ve temel bir işlemdir.
+Bir activity başlatmak ve ona bazı verileri iletmek Android'de basit ve temel bir işlemdir.
 Ancak, zaten çalışan bir activity'nin ön plana gelmesini ve veri aktarmasını istiyorsanız, işler biraz karışabilir ve bu biraz zor olabilir.
 
 Öncelikle, intenti olan activity'i çağırırsanız, başka bir instance zaten çalışıyor olsa bile o activityden yeni bir instance oluşturulur ve görüntülenir.
@@ -38,7 +38,7 @@ Adından da anlaşıldığı gibi, activity oluşturulduğunda çalışır (onCr
     }
  ```
  
-Activity ilk kez oluşturulduğunda ve sistem arka plandaki activityleri kolayca öldürebildiğinden, onCreate'de normal şekilde veri alabileceğimizi unutmayın. Bu durumda, onNewIntent yerine onCreate methodu çağrılır.
+Activity ilk kez oluşturulduğunda ve sistem arka plandaki activityleri kolayca kapatabildiğinden, onCreate'de normal şekilde veri alabileceğimizi unutmayın. Bu durumda, onNewIntent yerine onCreate methodu çağrılır.
 
 Bu nedenle güzel bir çözüm olarak, processExtraData metodunda intenti alıyoruz ve onNewIntent'teki set ediyor ve yeni intent geldiğinde işlemleri ona göre düzenliyoruz ve bunu son olarak oncreate'de çağırıyoruz.
 
