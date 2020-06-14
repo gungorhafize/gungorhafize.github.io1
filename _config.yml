@@ -32,6 +32,7 @@ analytics: # Google Analytics
  hard_wrap: false
  future: true
  jailed: false
+ autoads: true
  theme: gungorhafize.github.io
  gfm_quirks: paragraph_end
 markdown: kramdown
