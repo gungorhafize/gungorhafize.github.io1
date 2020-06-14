@@ -64,6 +64,18 @@
   {% else %}
     <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.author-img }}">
   {% endif %}
+	
+  {% if page.autoads %}
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+         data-ad-client="ca-pub-3822577647724760",
+         enable_page_level_ads: true
+     });
+  </script>
+ {% endif %}	
+	
+	
 
 	<meta name="description" content="{{ page.description }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
