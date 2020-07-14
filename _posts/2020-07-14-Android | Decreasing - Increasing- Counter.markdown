@@ -2,23 +2,145 @@
 layout: post
 title: Android Decreasing Increasing Counter Design
 date: 2020-07-14 14:41:20 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: 
 img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [OpenCv, Digital Image Processing, detection, color, hsv, bgr]
+tags: [Android, Counter, View, Design]
 ---
-## Thresholding in OpenCv
-90's yr crucifix, selvage 8-bit listicle forage cliche shoreditch hammock microdosing synth. Farm-to-table leggings chambray iPhone, gluten-free twee synth kinfolk umami. Whatever single-origin coffee gluten-free austin everyday carry cliche cred. Plaid ramps kitsch woke pork belly organic. Trust fund whatever coloring book kombucha brooklyn. Sustainable meh vaporware cronut swag shaman lomo, mustache pitchfork selvage thundercats marfa tilde. Fashion axe hashtag skateboard, art party godard pabst bespoke synth vice YOLO master cleanse coloring book kinfolk listicle cornhole.
+## Android Sayaç Görünümü Tasarımı
+Bir sayaç tasarımı yapmak için önce bir tasarıma ihtiyaç duyarız. Activity_main.xml içerisine + / - butonları ve bir Textview eklemek sayacı oluşturmaya yetecektir.
 
->Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh. Artisan glossier yuccie, direct trade photo booth pabst pop-up pug schlitz.
+👾
 
-Cronut lumbersexual fingerstache asymmetrical, single-origin coffee roof party unicorn. Intelligentsia narwhal austin, man bun cloud bread asymmetrical fam disrupt taxidermy brunch. Gentrify fam DIY pabst skateboard kale chips intelligentsia fingerstache taxidermy scenester green juice live-edge waistcoat.
+```xml
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
-* Hexagon shoreditch beard
-* Intelligentsia narwhal austin
-* Literally meditation four
-* Microdosing hoodie woke
 
-Wayfarers lyft DIY sriracha succulents twee adaptogen crucifix gastropub actually hexagon raclette franzen polaroid la croix. Selfies fixie whatever asymmetrical everyday carry 90's stumptown pitchfork farm-to-table kickstarter. Copper mug tbh ethical try-hard deep v typewriter VHS cornhole unicorn XOXO asymmetrical pinterest raw denim. Skateboard small batch man bun polaroid neutra. Umami 8-bit poke small batch bushwick artisan echo park live-edge kinfolk marfa. Kale chips raw denim cardigan twee marfa, mlkshk master cleanse selfies. 
+        <Button
+            android:id="@+id/btnDec"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:background="@drawable/round"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:layout_marginLeft="60dp">
 
-Echo park try-hard irony tbh vegan pok pok. Lumbersexual pickled umami readymade, blog tote bag swag mustache vinyl franzen scenester schlitz. Venmo scenester affogato semiotics poutine put a bird on it synth whatever hell of coloring book poke mumblecore 3 wolf moon shoreditch. Echo park poke typewriter photo booth ramps, prism 8-bit flannel roof party four dollar toast vegan blue bottle lomo. Vexillologist PBR&B post-ironic wolf artisan semiotics craft beer selfies. Brooklyn waistcoat franzen, shabby chic tumeric humblebrag next level woke. Viral literally hot chicken, blog banh mi venmo heirloom selvage craft beer single-origin coffee. Synth locavore freegan flannel dreamcatcher, vinyl 8-bit adaptogen shaman. Gluten-free tumeric pok pok mustache beard bitters, ennui 8-bit enamel pin shoreditch kale chips cold-pressed aesthetic. Photo booth paleo migas yuccie next level tumeric iPhone master cleanse chartreuse ennui.
+        </Button>
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="1"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/transparent"
+            android:layout_marginStart="30dp"
+            android:visibility="gone"
+            android:layout_marginLeft="100dp"
+            android:gravity="center_horizontal"></TextView>
+
+
+        <Button
+            android:id="@+id/btnInc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:background="@drawable/round"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginLeft="200dp"
+            ></Button>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"></View>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Kaydet"
+        android:textColor="#fff"
+        android:background="@drawable/round"
+        android:visibility="gone">
+
+    </Button>
+
+```
+
+>👾 Drawable folder içerisinde bir view ekliyoruz.
+
+
+```xml
+  <?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:padding="5dp">
+    <solid android:color="#29B6F6"/> <!-- Yuvarlak buton renk mavi kodu-->
+    <corners
+        android:bottomRightRadius="50dp"
+        android:bottomLeftRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:topRightRadius="50dp"/>
+</shape>
+
+```
+Textview için transparent bir view görünüm elde etmek için Drawable folder içerine transparent.xml ekliyoruz.
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:padding="5dp">
+    <solid android:color="#E3F2FD"/> <!-- Transparent blue color -->
+    <corners
+        android:bottomRightRadius="50dp"
+        android:bottomLeftRadius="50dp"
+        android:topLeftRadius="50dp"
+        android:topRightRadius="50dp"/>
+</shape>
+
+```
+👾 Tasarım işlemleri tamamlandıktan sonra MainActivity içerisinde onCreate methodunda bu componentleri tanımlayıp ve click eventleri içine artırma azaltma işlemlerini uyguluyoruz.
+
+```java
+                value = findViewById(R.id.value);
+                btnInc = findViewById(R.id.btnInc);
+                btnDec = findViewById(R.id.btnDec);
+                
+                  btnInc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        count++;
+                        value.setText(String.valueOf(count)); //Value is a Textview
+                    }
+                });
+
+                btnDec.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (count<=1) count=1;
+                        else count--;
+                        value.setText(String.valueOf(count));
+                    }
+                });
+```
+
+
+Burada count'un 1'den küçük olmamasına dikkat edildi. Basit bir view tasarımı elde etmiş olduk. Bir başka yazıda görüşmek üzere...😎
