@@ -3,7 +3,7 @@ layout: post
 title: Android Decreasing Increasing Counter Design
 date: 2020-07-14 14:41:20 +0300
 description: 
-img: i-rest.jpg # Add image post (optional)
+img: and.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Counter, View, Design]
 ---
@@ -143,6 +143,8 @@ Textview için transparent bir view görünüm elde etmek için Drawable folder 
                     }
                 });
 ```
+
+![sscounter](https://user-images.githubusercontent.com/33956266/87424909-7dfaea00-c5e5-11ea-9354-9d1a62b0653f.JPG)
 
 
 Burada count'un 1'den küçük olmamasına dikkat edildi. Basit bir view tasarımı elde etmiş olduk. Bir başka yazıda görüşmek üzere...😎
