@@ -8,7 +8,6 @@ fig-caption: # Add figcaption (optional)
 tags: [Android, Counter, View, Design]
 ---
 ## Android Sayaç Görünümü Tasarımı
-![and](https://user-images.githubusercontent.com/33956266/87424770-34aa9a80-c5e5-11ea-818c-d88c66dcba55.png)
 
 Bir sayaç tasarımı yapmak için önce bir tasarıma ihtiyaç duyarız. Activity_main.xml içerisine + / - butonları ve bir Textview eklemek sayacı oluşturmaya yetecektir.
 
