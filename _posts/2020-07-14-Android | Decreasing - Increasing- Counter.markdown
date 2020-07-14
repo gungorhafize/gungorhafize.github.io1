@@ -3,7 +3,7 @@ layout: post
 title: Android Decreasing Increasing Counter Design
 date: 2020-07-14 14:41:20 +0300
 description: 
-img: and.png # Add image post (optional)
+img: android.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Counter, View, Design]
 ---
