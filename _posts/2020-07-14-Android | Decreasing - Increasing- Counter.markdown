@@ -144,7 +144,8 @@ Textview için transparent bir view görünüm elde etmek için Drawable folder 
                 });
 ```
 
-<img width="460" height="300" src=" https://user-images.githubusercontent.com/33956266/87424909-7dfaea00-c5e5-11ea-9354-9d1a62b0653f.JPG">
-
+<p align="center">
+src=" https://user-images.githubusercontent.com/33956266/87424909-7dfaea00-c5e5-11ea-9354-9d1a62b0653f.JPG">
+</p>
 
 Burada count'un 1'den küçük olmamasına dikkat edildi. Basit bir view tasarımı elde etmiş olduk. Bir başka yazıda görüşmek üzere...😎
