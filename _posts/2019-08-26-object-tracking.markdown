@@ -7,14 +7,4 @@ img: allofthem.JPG # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [OpenCv, Digital Image Processing, detection, color, hsv, bgr]
 ---
-Fam locavore snackwave bushwick +1 sartorial. 
-
-Selfies sriracha taiyaki woke squid synth intelligentsia ethical kickstarter art party neutra biodiesel scenester. 
->Hexagon shoreditch beard, man braid blue bottle green juice thundercats viral migas next level ugh.
-
-
-* Hexagon shoreditch beard
-* Intelligentsia narwhal austin
-* Literally meditation four
-
-Echo park try-hard irony tbh vegan pok pok. Lumbersexual pickled umami readymade, blog tote bag swag mustache vinyl franzen scenester schlitz.
+pek yakında...
