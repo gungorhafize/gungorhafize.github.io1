@@ -14,11 +14,11 @@ NFC technology is derived from RFID (Radio Frequency Identification) and works b
 🚩 So how does NFC Technology work and what is different from RFID?
 NFC - a contactless technology -, is one of many communication tools used to instantly access all digital data and information on your mobile device. There are 3 different ways to do this:
 
-# 1) ⭐ The Host Card Emulation Mode
+### 1) ⭐ The Host Card Emulation Mode
 Card emulation mode; it is the "passive" mode in which a mobile terminal acts like a smart contactless chip. The phone sends the information to the NFC (Near Field Communication) device. It can serve a variety of purposes: mobile contactless payment, cinema, theater or transportation tickets, coupons, access control, etc.
-# 2) ⭐ The Peer-to-peer Mode
+### 2) ⭐ The Peer-to-peer Mode
 In this mode, data exchange works in both directions between two mobile devices communicating with each other via NFC. Common applications are to exchange contact information (vCards) between two smartphones, transfer files such as photos or videos, and instantly transfer funds.
-# 3) ⭐ The Reader Mode
+### 3) ⭐ The Reader Mode
 In reader mode, the mobile device has an "active" role as a contactless chip reader. This mode allows you to read information or trigger actions by “tapping” or “near” your phone close to an NFC tag. NFC tags can be placed on posters, billboards, bus stops or product packages, expanding the range of uses and opportunities.
 
 NFC tags are very similar to QR code features, but of course there are differences, so what are they? 🤔
