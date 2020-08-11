@@ -22,8 +22,9 @@ In this mode, data exchange works in both directions between two mobile devices 
 In reader mode, the mobile device has an "active" role as a contactless chip reader. This mode allows you to read information or trigger actions by “tapping” or “near” your phone close to an NFC tag. NFC tags can be placed on posters, billboards, bus stops or product packages, expanding the range of uses and opportunities.
 
 NFC tags are very similar to QR code features, but of course there are differences, so what are they? 🤔
+
 NFC (Near Field Communication) and QR Codes are two wireless technologies that can be used in the same way: data transfer and content linking. Nevertheless, there are some features that differ from each other. QR Codes are universal: every smartphone can potentially read a QR code after a QR Code reader app is installed (app download only takes 3 clicks and it's free). When it comes to NFC, it is out of the question to achieve NFC compatibility on all smartphones. 
-See detailed list of NFC compatible smartphones here]https://en.wikipedia.org/wiki/List_of_NFC-enabled_mobile_devices) Tık tık 👈
+[See detailed list of NFC compatible smartphones here] https://en.wikipedia.org/wiki/List_of_NFC-enabled_mobile_devices) Tık tık 👈
 
 To read a QR code, users must first open the specific QR Code reader app downloaded from the app store and hover their smartphone over the 2D code to decode it. NFC is more convenient and faster: The action is triggered automatically when your phone is within 10 cm (3.94 inches) of the NFC tag and you have instant access to content on the mobile device without a single click.
 
