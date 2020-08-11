@@ -47,9 +47,9 @@ Active RFID tags contain their own power supply that allows them to broadcast wi
 Passive RFID tags do not have their own power source. Instead, they work with electromagnetic energy transmitted from the RFID reader. Passive RFID tags have a reading range of up to 25 meters from close contact, as the radio waves must be strong enough to power the tags.
 
 Passive RFID tags primarily operate in three frequency ranges:
-# * Low Frequency (LF) 125--134 kHz
-# * High Frequency (HF) 13.56 MHz
-# * Ultra High Frequency (UHF) 856 MHz - 960 MHz
+ * Low Frequency (LF) 125--134 kHz
+ * High Frequency (HF) 13.56 MHz
+ * Ultra High Frequency (UHF) 856 MHz - 960 MHz
 
 Near-field communication devices operate at the same frequency (13.56 MHz) as HF RFID readers and tags. The standards and protocols of the NFC format are based on the RFID standards specified in ISO/IEC 14443, FeliCa and parts of the ISO/IEC 18092. These standards are related to the use of RFID in proximity cards.
 P2P communication is a attribute that distinguishes NFC from modal RFID devices. An NFC device can behave as both a reader and a tag. This inimitable ability has made NFC a popular choice for contactless payment, a key driver in the decision of influential players in the mobile industry to include NFC in new smartphones. Also, NFC smartphones transfer information from one smartphone to another by tapping two devices, making it a simple task to share data such as contact information or photos. Recently, you may have seen advertising using smart posters to convey information to consumers.
