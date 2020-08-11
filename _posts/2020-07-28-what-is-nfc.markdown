@@ -3,148 +3,57 @@ layout: post
 title: What is Near Field Communication (NFC)?
 date: 2020-07-28 11:50:20 +0300
 description: 
-img: android.jpg # Add image post (optional)
+img: nn.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [NFC, RFID, Near Field Communication]
 ---
-## Android Sayaç Görünümü Tasarımı
 
-Bir sayaç tasarımı yapmak için önce bir tasarıma ihtiyaç duyarız. Activity_main.xml içerisine + / - butonları ve bir Textview eklemek sayacı oluşturmaya yetecektir.
+NFC or Near Field Communication is a short-range wireless RFID communication technology. This means that two devices with NFC technology can communicate with each other and share information at a distance of at least 10 cm as soon as they are close to each other.
+NFC technology is derived from RFID (Radio Frequency Identification) and works by creating a "near field" (about 10 centimeters maximum) using high frequencies to allow interaction with NFC-equipped devices.
 
-👾
+So how does NFC Technology work and what is different from RFID?
+NFC - a contactless technology -, is one of many communication tools used to instantly access all digital data and information on your mobile device. There are 3 different ways to do this:
 
-```xml
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+# 1) The Host Card Emulation Mode
+Card emulation mode; it is the "passive" mode in which a mobile terminal acts like a smart contactless chip. The phone sends the information to the NFC (Near Field Communication) device. It can serve a variety of purposes: mobile contactless payment, cinema, theater or transportation tickets, coupons, access control, etc.
+# 2) The Peer-to-peer Mode
+In this mode, data exchange works in both directions between two mobile devices communicating with each other via NFC. Common applications are to exchange contact information (vCards) between two smartphones, transfer files such as photos or videos, and instantly transfer funds.
+# 3) The Reader Mode
+In reader mode, the mobile device has an "active" role as a contactless chip reader. This mode allows you to read information or trigger actions by “tapping” or “near” your phone close to an NFC tag. NFC tags can be placed on posters, billboards, bus stops or product packages, expanding the range of uses and opportunities.
 
+NFC tags are very similar to QR code features, but of course there are differences, so what are they?
+NFC (Near Field Communication) and QR Codes are two wireless technologies that can be used in the same way: data transfer and content linking. Nevertheless, there are some features that differ from each other. QR Codes are universal: every smartphone can potentially read a QR code after a QR Code reader app is installed (app download only takes 3 clicks and it's free). When it comes to NFC, it is out of the question to achieve NFC compatibility on all smartphones. 
+See detailed list of NFC compatible smartphones here]https://en.wikipedia.org/wiki/List_of_NFC-enabled_mobile_devices) Tık tık 👈
 
-        <Button
-            android:id="@+id/btnDec"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="-"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:background="@drawable/round"
-            android:layout_marginStart="5dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:visibility="gone"
-            android:layout_marginLeft="60dp">
+To read a QR code, users must first open the specific QR Code reader app downloaded from the app store and hover their smartphone over the 2D code to decode it. NFC is more convenient and faster: The action is triggered automatically when your phone is within 10 cm (3.94 inches) of the NFC tag and you have instant access to content on the mobile device without a single click.
 
-        </Button>
+## How does NFC work?
 
-        <TextView
-            android:id="@+id/value"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="1"
-            android:textSize="30dp"
-            android:textAlignment="center"
-            android:background="@drawable/transparent"
-            android:layout_marginStart="30dp"
-            android:visibility="gone"
-            android:layout_marginLeft="100dp"
-            android:gravity="center_horizontal"></TextView>
+Now that we know what NFC is, how does it work? Like Bluetooth and Wi-Fi and all other wireless signals, NFC works on the principle of sending information over radio waves. Near Field Communication is another standard for wireless data transit. This means that devices must conform to certain specifications to be able to communicate with each other properly. The technology used in NFC is based on old ideas of RFID (Radio frequency identification) using electromagnetic induction to transmit information.
+This marks the biggest difference between NFC and Bluetooth / WiFi. The former can be used to induce electrical currents within passive components and simply send data. This means that passive devices do not require their own power source. Instead, they can be amplified by the electromagnetic field generated by an active NFC component when it comes to range. NFC technology does not command enough inductance to charge our smartphones, but QI wireless charging is based on the same principle.
 
+![mm](https://user-images.githubusercontent.com/33956266/89878246-f4314300-dbc9-11ea-9c2c-c9f8532b6bb9.png)
 
-        <Button
-            android:id="@+id/btnInc"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="+"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            android:background="@drawable/round"
-            android:layout_centerVertical="true"
-            android:visibility="gone"
-            android:layout_marginLeft="200dp"
-            ></Button>
+Electromagnetic fields can be used to transmit data or to induce electric currents in a receiving device. Passive NFC devices draw power from fields generated by active devices, but the range is short.
+The transmission frequency for data in NFC is 13.56 megahertz. You can send data at 106, 212 or 424 kilobits per second. This is fast enough for a range of data transfers, from contact details to changing pictures and music.
 
-    </RelativeLayout>
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"></View>
+## What are the differences between NFC and RFID?
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Kaydet"
-        android:textColor="#fff"
-        android:background="@drawable/round"
-        android:visibility="gone">
+RFID is the process by which items are uniquely identified using radio waves, and NFC is a specialized subset within the RFID technology family. In particular, NFC is a branch of High Frequency (HF) RFID and both operate at a frequency of 13.56 MHz. NFC is designed as a form of secure data exchange, and the NFC device can be both an NFC reader and an NFC tag. This unique feature allows NFC devices to communicate peer-to-peer.
 
-    </Button>
+By definition, RFID is a unique method of identifying items using radio waves. At a minimum, an RFID system includes a tag, a reader, and an antenna. The reader sends an interrogation signal to the tag via the antenna and the tag responds with its unique information. RFID tags are Active or Passive.
 
-```
+Active RFID tags contain their own power supply that allows them to broadcast with a reading range of up to 100 meters. Long read intervals make active RFID tags ideal for many industries where asset location and other improvements in logistics are important.
+Passive RFID tags do not have their own power source. Instead, they work with electromagnetic energy transmitted from the RFID reader. Passive RFID tags have a reading range of up to 25 meters from close contact, as the radio waves must be strong enough to power the tags.
 
->👾 Drawable folder içerisinde bir view ekliyoruz.
+Passive RFID tags primarily operate in three frequency ranges:
+# * Low Frequency (LF) 125--134 kHz
+# * High Frequency (HF) 13.56 MHz
+# * Ultra High Frequency (UHF) 856 MHz - 960 MHz
 
+Near-field communication devices operate at the same frequency (13.56 MHz) as HF RFID readers and tags. The standards and protocols of the NFC format are based on the RFID standards specified in ISO/IEC 14443, FeliCa and parts of the ISO/IEC 18092. These standards are related to the use of RFID in proximity cards.
+P2P communication is a attribute that distinguishes NFC from modal RFID devices. An NFC device can behave as both a reader and a tag. This inimitable ability has made NFC a popular choice for contactless payment, a key driver in the decision of influential players in the mobile industry to include NFC in new smartphones. Also, NFC smartphones transfer information from one smartphone to another by tapping two devices, making it a simple task to share data such as contact information or photos. Recently, you may have seen advertising using smart posters to convey information to consumers.
 
-```xml
-  <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle"
-    android:padding="5dp">
-    <solid android:color="#29B6F6"/> <!-- Yuvarlak buton renk mavi kodu-->
-    <corners
-        android:bottomRightRadius="50dp"
-        android:bottomLeftRadius="50dp"
-        android:topLeftRadius="50dp"
-        android:topRightRadius="50dp"/>
-</shape>
+In addition, NFC devices can read passive NFC tags, and some NFC devices can read passive HF RFID tags compliant with ISO 15693. The data in these tags may contain commands for the device, such as opening a specific mobile application. You may start to see HF RFID tags and NFC tags more often in advertisements, banners and signs because they are an effective method of communicating this information to consumers.
+At the end of the day, NFC is based on HF RFID standards and transforms the limitations of operating frequency into a unique feature of near field communication.
 
-```
-Textview için transparent bir view görünüm elde etmek için Drawable folder içerine transparent.xml ekliyoruz.
-
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle"
-    android:padding="5dp">
-    <solid android:color="#E3F2FD"/> <!-- Transparent blue color -->
-    <corners
-        android:bottomRightRadius="50dp"
-        android:bottomLeftRadius="50dp"
-        android:topLeftRadius="50dp"
-        android:topRightRadius="50dp"/>
-</shape>
-
-```
-👾 Tasarım işlemleri tamamlandıktan sonra MainActivity içerisinde onCreate methodunda bu componentleri tanımlayıp ve click eventleri içine artırma azaltma işlemlerini uyguluyoruz.
-
-```java
-                value = findViewById(R.id.value);
-                btnInc = findViewById(R.id.btnInc);
-                btnDec = findViewById(R.id.btnDec);
-                
-                  btnInc.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        count++;
-                        value.setText(String.valueOf(count)); //Value is a Textview
-                    }
-                });
-
-                btnDec.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if (count<=1) count=1;
-                        else count--;
-                        value.setText(String.valueOf(count));
-                    }
-                });
-```
-
-
-![sscounter](https://user-images.githubusercontent.com/33956266/87425352-27da7680-c5e6-11ea-8330-e6a0f6381026.JPG)
-
-
-Burada count'un 1'den küçük olmamasına dikkat edildi. Basit bir view tasarımı elde etmiş olduk. Bir başka yazıda görüşmek üzere...😎
