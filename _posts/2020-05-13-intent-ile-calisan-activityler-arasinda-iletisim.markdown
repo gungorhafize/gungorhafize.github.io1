@@ -7,7 +7,7 @@ img: android.png # Add image post (optional)
 tags: [Intent, Android, Software] # add tag
 ---
 
-Bir activity başlatmak ve ona bazı verileri iletmek Android'de basit ve temel bir işlemdir.
+Bir activity başlatmak ve ona bazı verileri iletmek Android'de basit ve temel bir işlemdir...
 Ancak, zaten çalışan bir activity'nin ön plana gelmesini ve veri aktarmasını istiyorsanız, işler biraz karışabilir ve bu biraz zor olabilir.
 
 Öncelikle, intenti olan activity'i çağırırsanız, başka bir instance zaten çalışıyor olsa bile o activityden yeni bir instance oluşturulur ve görüntülenir.
