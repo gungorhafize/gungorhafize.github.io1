@@ -3,7 +3,7 @@ layout: post
 title: How to upload an app bundle (.aab file) to Huawei AppGallery | Huawei App Signing
 date: 2020-08-28 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: asdad.jpg # Add image post (optional)
+img: app.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Huawei, AppGallery, app-signing, app-bundle, android, apk] # add tag
 ---
