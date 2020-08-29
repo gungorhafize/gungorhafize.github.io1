@@ -34,7 +34,7 @@ The point to note here is that "Add to Project" should be marked. This part will
 After completing the app information section, in the software version area, click "Software Packages" and upload the software package. We can upload apk or .aab file here, but it would be a more logical option for you to install app bundle in terms of efficiency and optimization.
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/91638024-35708200-ea15-11ea-9a3e-98323487fb04.png">
+  <img width="2000" height="300" src="https://user-images.githubusercontent.com/33956266/91638024-35708200-ea15-11ea-9a3e-98323487fb04.png">
 </p>
 
 In order to add the app bundle, we click on the "Software packages" button and "Upload" from the window that opens. However, since our application has not been signed yet, there will be an expression stating that we need to switch to the App Signature module in the Services section on the left tab.
