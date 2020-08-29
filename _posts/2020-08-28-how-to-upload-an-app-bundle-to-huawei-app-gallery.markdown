@@ -44,7 +44,7 @@ In order to add the app bundle, we click on the "Software packages" button and "
 Android apps use a private key for signing. To ensure reliable application updates, each private key has an associated public key certificate. Devices and services can use the public key certificate to check whether an application is from a trusted source. An application update is considered reliable only when the update signature matches the signature of the uploaded application and the update is performed. Here again, there are two options.
 
 <p align="center">
-  <img width="2000" height="300" src="https://user-images.githubusercontent.com/33956266/91638205-4c63a400-ea16-11ea-8b6f-5f2560391fb4.png">
+  <img width="2000" height="100" src="https://user-images.githubusercontent.com/33956266/91638205-4c63a400-ea16-11ea-8b6f-5f2560391fb4.png">
 </p>
 
 The first one marked here is the recommended one so that AppGallery Connect can properly manage and maintain your application signature key, it is recommended that you use App Signing - App Signing service and use the key to sign your app for distribution. The service securely stores the signature key and secures your content even in case of key loss or theft.
