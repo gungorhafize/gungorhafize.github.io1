@@ -19,7 +19,7 @@ You need to create the application you will install in AppGallery Connect.
 # 2) Click on "New App".
 
 <p align="center">
-  <img width="2000" height="600" src="https://user-images.githubusercontent.com/33956266/91637851-0efe1700-ea14-11ea-9d10-1038c1e4755e.png">
+  <img width="2000" height="100" src="https://user-images.githubusercontent.com/33956266/91637851-0efe1700-ea14-11ea-9d10-1038c1e4755e.png">
 </p>
 
 Then, after selecting the options such as application name, category, default language in the window that opens, we move on to the next step.
