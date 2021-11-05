@@ -17,7 +17,9 @@ Madde 1: Geliştirmeyi hızlandırmak: Bileşenler ayrı ayrı kullanılabilir (
 Madde 2: Standart kodu ortadan kaldırmak: Android Jetpack, sıkıcı etkinlikleri (arka plan görevleri, gezinme ve yaşam döngüsü yönetimi gibi) yönetebilir, böylece uygulamanızı nasıl öne çıkaracağınıza odaklanabilirsiniz. 
 Madde 3: Yüksek kaliteli ve güçlü uygulamalar oluşturmak: Android Jetpack bileşenleri, modern tasarım uygulamaları temel alınarak oluşturulmuştur ve çökmeleri ve bellek sızıntılarını azaltmak için geriye dönük uyumludur.
 
-
+<p align="center">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/140504984-380b4b9e-c225-49fa-a114-cb35f36b20bc.png">
+</p>
 Android Jetpack bileşenleri dört türe ayrılır:
 Foundation: Temel bileşenler, geriye dönük uyumluluk, test etme ve Kotlin dil desteği gibi yatay işlevler sağlar.
 Architecture: Mimari bileşenler, sağlam, test edilebilir ve bakımı kolay uygulamalar tasarlamanıza yardımcı olur.
