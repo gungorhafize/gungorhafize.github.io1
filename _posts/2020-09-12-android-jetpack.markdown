@@ -3,7 +3,7 @@ layout: post
 title: Android Jetpack
 date: 2020-09-12 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: red-green-and-blue-eye.jpg # Add image post (optional)
+img: jet.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Jetpack, software, kotlin] # add tag
 ---
