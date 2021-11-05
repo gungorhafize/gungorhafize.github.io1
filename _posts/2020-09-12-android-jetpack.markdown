@@ -21,7 +21,9 @@ Madde 3: Yüksek kaliteli ve güçlü uygulamalar oluşturmak: Android Jetpack b
   <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/140504984-380b4b9e-c225-49fa-a114-cb35f36b20bc.png">
 </p>
 Android Jetpack bileşenleri dört türe ayrılır:
-'*' Foundation: Temel bileşenler, geriye dönük uyumluluk, test etme ve Kotlin dil desteği gibi yatay işlevler sağlar.
-'*' Architecture: Mimari bileşenler, sağlam, test edilebilir ve bakımı kolay uygulamalar tasarlamanıza yardımcı olur.
+* Foundation:
+* 
+*   Temel bileşenler, geriye dönük uyumluluk, test etme ve Kotlin dil desteği gibi yatay işlevler sağlar.
+* Architecture: Mimari bileşenler, sağlam, test edilebilir ve bakımı kolay uygulamalar tasarlamanıza yardımcı olur.
 Behavior: Davranış bileşeni, uygulamanızın bildirimler, izinler, paylaşım ve Google Asistan gibi standart Android hizmetleriyle entegre olmasına yardımcı olur.
 Interface: Arayüz bileşenleri, uygulamanızı sadece kullanımı kolay değil, aynı zamanda hoş bir deneyim haline getiren widget'lar ve yardımcı programlar sağlayabilir. Arabirim geliştirmeyi basitleştirmeye yardımcı olan Jetpack Compose hakkında bilgi edinin.
