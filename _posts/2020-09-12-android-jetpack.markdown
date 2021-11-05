@@ -10,7 +10,7 @@ tags: [Android, Jetpack, software, kotlin] # add tag
 
 Android Jetpack, Android işletim sisteminin eski sürümlerini de destekleyen yüksek kaliteli uygulamaları kolayca yazmanıza yardımcı olmayı amaçlayan bir kütüphane paketidir.
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/67438459-38803200-f5fc-11e9-96a4-645184067c89.png">
+  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/140502999-f6b395dc-c694-4cea-b7c1-e6e007f35075.png">
 </p>
   
 Bir diğer deyimle Jetpack, biz geliştiricilerin uygulamaları daha kaliteli ve kolay bir şekilde yazmasına yardımcı olan bir dizi kütüphane, araç ve kılavuzdur. Bu bileşenler, sizi standart kod yazmaktan kurtarabilir ve ihtiyacınız olan koda odaklanabilmeniz için karmaşık olan görevleri basitleştirebilmektedir.
