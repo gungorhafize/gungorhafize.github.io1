@@ -24,7 +24,7 @@ Navigasyon olmadan, karmaşık navigasyon yolları oluşturan bir ekrandan diğe
 Özetleyecek olursak, çalışma mantığı; uygulamanızda gezinirken, NavController'a navigasyon grafiğinizdeki belirli bir yol boyunca veya doğrudan belirli gitmek istediğiniz hedef söylenir ve
 NavController da daha sonra NavHost'a uygun hedefi gösterir. 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/140744932-e2b94ae7-5486-46aa-9904-255faa4701e6.png">
+  <img width="500" height="500" src="https://user-images.githubusercontent.com/33956266/140744932-e2b94ae7-5486-46aa-9904-255faa4701e6.png">
 </p>
 
 **Android Jetpack Navigation Bileşeni Avantajları:
