@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android Jetpack Navigation Bileşeni
+title: Android Jetpack Navigation Bileşeni - 1
 date: 2020-09-20 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: nav2.png # Add image post (optional)
@@ -15,7 +15,7 @@ Android Jetpack'in Navigation bileşeni, basit buton tıklamalarından app bar v
 Navigasyon bileşeni aynı zamanda yerleşik bir dizi ilkeye bağlı kalarak tutarlı ve öngörülebilir bir kullanıcı deneyimi sağlar. 
 Navigasyon olmadan, karmaşık navigasyon yolları oluşturan bir ekrandan diğerine geçmek için bir çok büyük yer kaplayan manuel kod yazmamız gerekiyordu. Artık gerekmiyor diyebiliriz Jetpack Navigation bileşeni imdadımıza yetişti! :) 
 
-**Navigasyon bileşeni, üç temel bölümden oluşur:
+*Navigasyon bileşeni, üç temel bölümden oluşur:
 
 * Navigation Graph: Navigasyon ile ilgili tüm bilgileri tek bir merkezi konumda içeren bir XML dosyası. Bu, uygulamanızdaki hedefler olarak adlandırılan tüm içerik alanlarının yanı sıra bir kullanıcının uygulamanızda izleyebileceği olası yolları içerir.
 * NavHost: Navigasyon grafiğinizden hedefleri görüntüleyen boş bir container gibi düşünebiliriz. Navigasyon bileşeni, fragment hedefini görüntüleyen varsayılan bir NavHost uygulaması olan NavHostFragment'i içerir.
@@ -116,5 +116,33 @@ NavController’a eriştikten sonra navigate() methodunu kullanarak geçilmek is
 ```xml
   Navigation.findNavController(view).navigate(R.id.action_title_screen_to_leaderboard)
 ```
+  
+### Hedefler arasında veri aktarımı nasıl yapılır?
+  
+Navigasyon, bir hedef için bağımsız değişkenler tanımlayarak bir navigasyon işlemine veri eklemenizi sağlar. Örneğin, bir kullanıcı profili hedefi, hangi kullanıcının görüntüleneceğini belirlemek için bir userId bağımsız değişkeni alabilir. Genel olarak, hedefler arasında yalnızca minimum miktarda veri iletmeyi tercih etmelisiniz. Örneğin, Android'de kaydedilen tüm durumlar için toplam alan sınırlı olduğundan, nesnenin kendisini geçmek yerine bir nesneyi almak için bir anahtar iletmelisiniz. Büyük miktarda veri iletmeniz gerekiyorsa, bir ViewModel kullanmayı düşünün.  
+  
+ Safe Args kullanarak tür güvenliğini sağlayın. Hedefler arasında gezinmenin önerilen yolu, Safe Args Gradle eklentisini kullanmaktır. Bu eklenti, hedefler arasında güvenli türde gezinme ve argüman geçişi sağlayan basit nesne ve oluşturucu sınıfları oluşturur. 
+  
+ ```xml kotlin
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        val nav_version = "2.3.5"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+    }
+}
+  
+  plugins {
+    id("androidx.navigation.safeargs.kotlin")
+}
+
+``` 
+  
+  
+  
+  
+  
   
   
