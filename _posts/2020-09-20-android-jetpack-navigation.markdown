@@ -27,7 +27,7 @@ NavController da daha sonra NavHost'a uygun hedefi gösterir.
   <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140744932-e2b94ae7-5486-46aa-9904-255faa4701e6.png">
 </p>
 
-**Android Jetpack Navigation Bileşeni Avantajları:
+Android Jetpack Navigation Bileşeni Avantajları:
  * Fragment transaction asenkron olarak gerçekleşir.
  * Test etmek çok daha kolaydır.
  * Deep linkig kurmayı kolay ve tutarlı hale getirir.
