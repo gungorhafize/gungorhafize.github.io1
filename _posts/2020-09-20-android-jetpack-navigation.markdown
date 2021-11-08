@@ -45,10 +45,6 @@ Navigation grafiğini kullanmak için Android 3.3 veya sonraki bir sürümde olm
 dependencies {
   val nav_version = "2.3.5"
 
-  // Java language implementation
-  implementation("androidx.navigation:navigation-fragment:$nav_version")
-  implementation("androidx.navigation:navigation-ui:$nav_version")
-
   // Kotlin
   implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
   implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
@@ -64,3 +60,11 @@ dependencies {
 }
 
 ```
+
+Projeye navigation graph eklemek için resource dosyasına sağ tıklayıp yeni New > Android Resource File seçmeniz gerekmektedir. Gelen ekrandaki açılır listeden Resource type olarak Navigation seçin, dosyanın adını nav_graph ya da başka benzeri bir isimle kaydedin.
+
+Aşağıdaki örnek bir navigation graph yer almaktadır. Her bir ekran bir fragmentı, oklar ise action'ları temsil etmektedir.
+
+<p align="center">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140752544-88b9d3dd-6cdd-4911-b4e7-d8a6a78fa4df.png">
+</p>
