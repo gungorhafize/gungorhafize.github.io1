@@ -12,10 +12,10 @@ Android Jetpack, Android işletim sisteminin eski sürümlerini de destekleyen y
   
 Bir diğer deyimle Jetpack, biz geliştiricilerin uygulamaları daha kaliteli ve kolay bir şekilde yazmasına yardımcı olan bir dizi kütüphane, araç ve kılavuzdur. Bu bileşenler, sizi standart kod yazmaktan kurtarabilir ve ihtiyacınız olan koda odaklanabilmeniz için karmaşık olan görevleri basitleştirebilmektedir.
 
-Android Jetpack neden var diye düşünüyor olabiliriz? 
-Madde 1: Geliştirmeyi hızlandırmak: Bileşenler ayrı ayrı kullanılabilir (ancak bu bileşenler ortak çalışma için oluşturulmuştur), aynı zamanda iş verimliliğini artırmanıza yardımcı olmak için Kotlin dil özelliklerini kullanır. 
-Madde 2: Standart kodu ortadan kaldırmak: Android Jetpack, sıkıcı etkinlikleri (arka plan görevleri, gezinme ve yaşam döngüsü yönetimi gibi) yönetebilir, böylece uygulamanızı nasıl öne çıkaracağınıza odaklanabilirsiniz. 
-Madde 3: Yüksek kaliteli ve güçlü uygulamalar oluşturmak: Android Jetpack bileşenleri, modern tasarım uygulamaları temel alınarak oluşturulmuştur ve çökmeleri ve bellek sızıntılarını azaltmak için geriye dönük uyumludur.
+**Android Jetpack neden var diye düşünüyor olabiliriz? 
+* Madde 1: Geliştirmeyi hızlandırmak: Bileşenler ayrı ayrı kullanılabilir (ancak bu bileşenler ortak çalışma için oluşturulmuştur), aynı zamanda iş verimliliğini artırmanıza yardımcı olmak için Kotlin dil özelliklerini kullanır. 
+* Madde 2: Standart kodu ortadan kaldırmak: Android Jetpack, sıkıcı etkinlikleri (arka plan görevleri, gezinme ve yaşam döngüsü yönetimi gibi) yönetebilir, böylece uygulamanızı nasıl öne çıkaracağınıza odaklanabilirsiniz. 
+* Madde 3: Yüksek kaliteli ve güçlü uygulamalar oluşturmak: Android Jetpack bileşenleri, modern tasarım uygulamaları temel alınarak oluşturulmuştur ve çökmeleri ve bellek sızıntılarını azaltmak için geriye dönük uyumludur.
 
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/33956266/140504984-380b4b9e-c225-49fa-a114-cb35f36b20bc.png">
