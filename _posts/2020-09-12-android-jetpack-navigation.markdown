@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Android Jetpack Navigation Bileşeni
-date: 2020-09-12 00:00:00 +0300
+date: 2020-09-20 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: nav.png # Add image post (optional)
+img: nav2.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Jetpack, Navigation, kotlin] # add tag
 ---
