@@ -63,8 +63,58 @@ dependencies {
 
 Projeye navigation graph eklemek için resource dosyasına sağ tıklayıp yeni New > Android Resource File seçmeniz gerekmektedir. Gelen ekrandaki açılır listeden Resource type olarak Navigation seçin, dosyanın adını nav_graph ya da başka benzeri bir isimle kaydedin.
 
+Oluşturduğumuz xml dosyasına tıkladığımızda karşımıza bir editör ekranı açılacak. Burada daha önce oluşturmuş olduğunuz fragmentleri destination olarak gösterebilir ya da editörün sol üstündeki + ikonuna tıklayarak orada yeni bir fragment oluşturabilirsiniz.
+
+<p align="center">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140752907-90859bae-450b-4cc5-bbac-b63e3895e02d.png">
+</p>
+
+Artık sıra activity’e NavHost eklemeye geldi. Navigation component aslında bir activity ve birden fazla fragment’tan oluşan yapılar için tasarlanmıştır. Ana activity bir navigation graph ile ilişkilidir ve tabii ki hedefleri değiştirmekten sorumlu bir NavHostFragment içerir. Birden çok activity olan uygulamalarda fragment geçişleri için her activty’nin bir navigation graph’i olmalıdır.
+
+Activity aşağıdaki gibi NavHostFragment içeren bir xml parçası bulundurmalıdır. <!Not: <fragment> tagi .FragmentContainerView'e update edilmiştir./>
+
+
+```xml
+ <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+```
+
 Aşağıdaki örnek bir navigation graph yer almaktadır. Her bir ekran bir fragmentı, oklar ise action'ları temsil etmektedir.
 
 <p align="center">
   <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140752544-88b9d3dd-6cdd-4911-b4e7-d8a6a78fa4df.png">
 </p>
+  
+Sırada action işlemlerini yapmak yani bir fragment’a nasıl gideriz. Her NavHost’un bir NavController’ı vardır actionları o yönetir. NavController’ı bulmak için aşağıdaki yöntemlerden birini kullanabilirsiniz.
+  
+Kotlin:
+
+* Fragment.findNavController()
+* View.findNavController()
+* Activity.findNavController(viewId: Int)
+  
+Java:
+
+* NavHostFragment.findNavController(Fragment)
+* Navigation.findNavController(Activity, @IdRes int viewId)
+* Navigation.findNavController(View)
+
+  
+NavController’a eriştikten sonra navigate() methodunu kullanarak geçilmek istenen fragment burada belirtilir. Burada dikkat edilmesi gereken bir nokta var. NavHost’unuzdaki belirtmiş olduğunuz navGraph’iniz geçmek istediğiniz fragmentları destination olarak belirlemelidir. Yoksa geçmek istediğiniz fragment’ı bulamayacak ve uygulamanız crash alıcaktır.
+  
+```xml
+  Navigation.findNavController(view).navigate(R.id.action_title_screen_to_leaderboard)
+```
+  
+  
