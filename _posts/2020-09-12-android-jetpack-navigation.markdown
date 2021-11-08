@@ -17,9 +17,9 @@ Navigasyon olmadan, karmaşık navigasyon yolları oluşturan bir ekrandan diğe
 
 **Navigasyon bileşeni, üç temel bölümden oluşur:
 
-     * Navigation Graph: Navigasyon ile ilgili tüm bilgileri tek bir merkezi konumda içeren bir XML dosyası. Bu, uygulamanızdaki hedefler olarak adlandırılan tüm içerik alanlarının yanı sıra bir kullanıcının uygulamanızda izleyebileceği olası yolları içerir.
-     * NavHost: Navigasyon grafiğinizden hedefleri görüntüleyen boş bir container gibi düşünebiliriz. Navigasyon bileşeni, fragment hedefini görüntüleyen varsayılan bir NavHost uygulaması olan NavHostFragment'i içerir.
-     * NavController: Bir NavHost içinde uygulama navigasyonunu yöneten bir nesne. NavController, kullanıcılar uygulamanızda hareket ettikçe NavHost'taki hedef içeriğin değiştirilmesini düzenler. 
+* Navigation Graph: Navigasyon ile ilgili tüm bilgileri tek bir merkezi konumda içeren bir XML dosyası. Bu, uygulamanızdaki hedefler olarak adlandırılan tüm içerik alanlarının yanı sıra bir kullanıcının uygulamanızda izleyebileceği olası yolları içerir.
+* NavHost: Navigasyon grafiğinizden hedefleri görüntüleyen boş bir container gibi düşünebiliriz. Navigasyon bileşeni, fragment hedefini görüntüleyen varsayılan bir NavHost uygulaması olan NavHostFragment'i içerir.
+* NavController: Bir NavHost içinde uygulama navigasyonunu yöneten bir nesne. NavController, kullanıcılar uygulamanızda hareket ettikçe NavHost'taki hedef içeriğin değiştirilmesini düzenler. 
 
 Özetleyecek olursak, çalışma mantığı; uygulamanızda gezinirken, NavController'a navigasyon grafiğinizdeki belirli bir yol boyunca veya doğrudan belirli gitmek istediğiniz hedef söylenir ve
 NavController da daha sonra NavHost'a uygun hedefi gösterir. 
