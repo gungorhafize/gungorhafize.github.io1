@@ -57,7 +57,7 @@ Yeni bir arguments eklemek için Arguments bölümündeki + işaretine tıkladı
   
   
 <p align="center">
-  <img width="500" height="300" src="https://user-images.githubusercontent.com/33956266/140912384-d5c49ec5-b745-4c68-9242-0d5dd480c710.PNG">
+  <img width="300" height="300" src="https://user-images.githubusercontent.com/33956266/140912384-d5c49ec5-b745-4c68-9242-0d5dd480c710.PNG">
 </p>  
 
 Long'u seçtiğimizde Nullable ögesinin gri olduğunu görüyoruz. Bunun nedeni, izin verilen temel türlerin (Integer, Boolean, Float, and Long) Java programlama dili katmanında primitive data types (int, bool, float ve long) tarafından desteklenmesi ve bu türlerin boş olamaz durumudur.
