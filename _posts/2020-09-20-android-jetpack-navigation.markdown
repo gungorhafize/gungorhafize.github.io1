@@ -15,7 +15,7 @@ Android Jetpack'in Navigation bileşeni, basit buton tıklamalarından app bar v
 Navigasyon bileşeni aynı zamanda yerleşik bir dizi ilkeye bağlı kalarak tutarlı ve öngörülebilir bir kullanıcı deneyimi sağlar. 
 Navigasyon olmadan, karmaşık navigasyon yolları oluşturan bir ekrandan diğerine geçmek için bir çok büyük yer kaplayan manuel kod yazmamız gerekiyordu. Artık gerekmiyor diyebiliriz Jetpack Navigation bileşeni imdadımıza yetişti! :) 
 
-*Navigasyon bileşeni, üç temel bölümden oluşur:
+Navigasyon bileşeni, üç temel bölümden oluşur:
 
 * Navigation Graph: Navigasyon ile ilgili tüm bilgileri tek bir merkezi konumda içeren bir XML dosyası. Bu, uygulamanızdaki hedefler olarak adlandırılan tüm içerik alanlarının yanı sıra bir kullanıcının uygulamanızda izleyebileceği olası yolları içerir.
 * NavHost: Navigasyon grafiğinizden hedefleri görüntüleyen boş bir container gibi düşünebiliriz. Navigasyon bileşeni, fragment hedefini görüntüleyen varsayılan bir NavHost uygulaması olan NavHostFragment'i içerir.
