@@ -42,7 +42,7 @@ Ardından, gerekli verileri oluşturmak ve iletmek için navigasyon grafiğine g
 
 
 <p align="center">
-  <img width="300" height="400" src="https://user-images.githubusercontent.com/33956266/140910270-e77120e8-89a2-4ecc-88f0-dbb2eb23e1da.PNG">
+  <img width="500" height="400" src="https://user-images.githubusercontent.com/33956266/140910270-e77120e8-89a2-4ecc-88f0-dbb2eb23e1da.PNG">
 </p>
 
 Bir bağımsız değişkene ihtiyaç duyan hedef, hangi öğenin görüntüleneceği hakkında bilgi gerektiren itemEntryDialogFragment iletişim kutusudur. Bu hedefe tıklamak, sağdaki hedef özelliklerini gösterdi. 
