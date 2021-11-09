@@ -11,7 +11,7 @@ tags: [Android, Jetpack, Navigation, SafeArgs, kotlin] # add tag
 Bu bölümde Navigation bileşeni tarafından hedefler arasında kolayca veri aktarımı için sağlamak ve SafeArgs üzerine duracağız. Uygulamanızda farklı hedeflere giderken veri iletmek isteyebilirsiniz. 
 Verileri iletmek, global nesnelere referanslar kullanmak yerine, kodunuzda daha iyi kapsüllemeye izin verir, böylece farklı fragment veya activitylerin yalnızca kendilerini doğrudan ilgilendiren kısımları paylaşması gerekir. 
 Navigation bileşeni, Android'de farklı activityler arasında bilgi iletmek için kullanılan genel mekanizma olan "Bundles" ile argümanların iletilmesini sağlar. Bunu burada tamamen yapabiliriz, iletmek istediğimiz argümanlar için bir Bundle oluşturabilir ve sonra onları diğer tarafta Bundle'dan çıkarabiliriz. 
-Ancak Navigasyonun çok daha iyi bir özelliği var: **SafeArgs.**
+Ancak Navigasyonun çok daha iyi bir özelliği var: **SafeArgs.** 
 SafeArgs, iletmek istediğiniz argümanlar hakkında navigation grafiğine bilgi girmenizi sağlayan bir gradle eklentisidir. 
 Ardından, bu argümanlar için bir Bundle oluşturmanın ve diğer taraftaki bu argümanları Bundle'dan çıkarmanın sıkıcı kısımlarını ele alan sizin için kod üretir. 
 Bundle'ı doğrudan kullanabiliriz ancak bunun yerine SafeArgs kullanmak Google tarafından önerilmektedir. Sadece yazması daha kolay olmakla kalmaz çok daha az kodla aynı zamanda argümanlarınız için tür güvenliği sağlayarak kodunuzu doğal olarak daha sağlam hale getirir. 
