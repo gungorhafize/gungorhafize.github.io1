@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android Jetpack Navigation Bileşeni |SafeArgs - 2
+title: Android Jetpack Navigation Bileşeni | SafeArgs - 2
 date: 2020-09-22 00:00:00 +0300
 description:
 img: nav2.png # Add image post (optional)
@@ -48,15 +48,34 @@ Ardından, gerekli verileri oluşturmak ve iletmek için navigasyon grafiğine g
 Bir bağımsız değişkene ihtiyaç duyan hedef, hangi öğenin görüntüleneceği hakkında bilgi gerektiren itemEntryDialogFragment iletişim kutusudur. Bu hedefe tıklamak, sağdaki hedef özelliklerini gösterdi. 
 
 
-
 <p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140911158-dc575277-4604-4605-882c-15a55d592152.PNG">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140911740-2fae694d-c1cb-4df9-92d0-7913f8fe0ebc.PNG">
 </p>
 
+Bir hedefe tıklamak, o hedefin özellik(attribute) sayfasını getirir; burası ona iletmek için argümanlar girebileceğiniz yerdir. 
+Yeni bir arguments eklemek için Arguments bölümündeki + işaretine tıkladım, bu da aşağıdaki diyaloğu getirdi. Hangi item ögesinin görüntüleneceği hakkında bilgi vermek istedim, bu yüzden veri tabanındaki id type'a karşılık gelmesi için type olarak Long'u seçtim. 
+  
+  
+<p align="center">
+  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140912384-d5c49ec5-b745-4c68-9242-0d5dd480c710.PNG">
+</p>  
 
-  
-  
-  
-  
+Long'u seçtiğimizde Nullable ögesinin gri olduğunu görüyoruz. Bunun nedeni, izin verilen temel türlerin (Integer, Boolean, Float, and Long) Java programlama dili katmanında primitive data types (int, bool, float ve long) tarafından desteklenmesi ve bu türlerin boş olamaz durumudur.
+Bu nedenle, Kotlin'in Long türü null yapılabilir olsa da, temeldeki primitive long türü null olamaz, bu nedenle bu temel türleri kullanırken null olmayan türlerle sınırlandırılırız. 
+
+Unutulmaması gereken başka bir şey de, uygulamanın artık hem yeni bir öğe girmek, hem de mevcut bir öğeyi düzenlemek için dialog hedefini kullanmasıdır. Her zaman iletilecek bir itemId olmayacaktır; kullanıcı yeni bir öğe oluşturduğunda, kod görüntülenecek mevcut bir öge olmadığını belirtmelidir. Bu nedenle, -1 geçerli bir dizin olmadığı için, bu durumu belirtmek için iletişim kutusunda varsayılan değer için -1 girdim. Kod, herhangi bir bağımsız değişken sağlanmadan bu hedefe gittiğinde, varsayılan -1 değeri gönderilir ve alıcı kod, yeni bir item oluşturulduğuna karar vermek için bu değeri kullanır. 
+
+Bu adımdan sonra Rebuild project yaptığımızda proje files listesindeki “java (generated)” dosyalarına giderek oluşturulan kodun sonuçlarını görebilirsiniz. Alt klasörlerden birinin içinde, argümanı iletmek ve almak için oluşturulan yeni dosyaları görebilirsiniz. 
+ItemListDirections'da, dialog kutusuna gitmek için kullandığım API olan eşlik eden nesneyi görebilirsiniz. 
+
+```kotlin
+companion object {
+    fun actionItemListToItemEntryDialogFragment(
+        itemId: Long = -1L): NavDirections =
+        ActionItemListToItemEntryDialogFragment(itemId)
+}
+```
+
+Navigate() metodunun orijinal olarak kullandığı bir Action kullanmak yerine, hem eylemi (bizi diyalog hedefine götürür) hem de daha önce oluşturulan argümanı içine alan NavDirections nesnesini kullandık. 
   
   
