@@ -111,34 +111,12 @@ Java:
 * Navigation.findNavController(View)
 
   
-NavController’a eriştikten sonra navigate() methodunu kullanarak geçilmek istenen fragment burada belirtilir. Burada dikkat edilmesi gereken bir nokta var. NavHost’unuzdaki belirtmiş olduğunuz navGraph’iniz geçmek istediğiniz fragmentları destination olarak belirlemelidir. Yoksa geçmek istediğiniz fragment’ı bulamayacak ve uygulamanız crash alıcaktır.
+NavController’a eriştikten sonra navigate() methodunu kullanarak geçilmek istenen fragment burada belirtilir. Burada dikkat edilmesi gereken bir nokta var. NavHost’unuzdaki belirtmiş olduğunuz navGraph’iniz geçmek istediğiniz fragmentları destination olarak belirlemelidir. Yoksa geçmek istediğiniz fragment’ı bulamayacak ve uygulamanız crash olacaktır.
   
 ```xml
   Navigation.findNavController(view).navigate(R.id.action_title_screen_to_leaderboard)
 ```
   
-### Hedefler arasında veri aktarımı nasıl yapılır?
-  
-Navigasyon, bir hedef için bağımsız değişkenler tanımlayarak bir navigasyon işlemine veri eklemenizi sağlar. Örneğin, bir kullanıcı profili hedefi, hangi kullanıcının görüntüleneceğini belirlemek için bir userId bağımsız değişkeni alabilir. Genel olarak, hedefler arasında yalnızca minimum miktarda veri iletmeyi tercih etmelisiniz. Örneğin, Android'de kaydedilen tüm durumlar için toplam alan sınırlı olduğundan, nesnenin kendisini geçmek yerine bir nesneyi almak için bir anahtar iletmelisiniz. Büyük miktarda veri iletmeniz gerekiyorsa, bir ViewModel kullanmayı düşünün.  
-  
- Safe Args kullanarak tür güvenliğini sağlayın. Hedefler arasında gezinmenin önerilen yolu, Safe Args Gradle eklentisini kullanmaktır. Bu eklenti, hedefler arasında güvenli türde gezinme ve argüman geçişi sağlayan basit nesne ve oluşturucu sınıfları oluşturur. 
-  
- ```xml kotlin
-buildscript {
-    repositories {
-        google()
-    }
-    dependencies {
-        val nav_version = "2.3.5"
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
-    }
-}
-  
-  plugins {
-    id("androidx.navigation.safeargs.kotlin")
-}
-
-``` 
   
   
   
