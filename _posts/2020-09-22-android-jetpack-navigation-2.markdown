@@ -3,7 +3,7 @@ layout: post
 title: SafeArgs | Android Jetpack Navigation Bileşeni-2
 date: 2020-09-22 00:00:00 +0300
 description:
-img: saa.png # Add image post (optional)
+img: qqq.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Jetpack, Navigation, SafeArgs, kotlin] # add tag
 ---
