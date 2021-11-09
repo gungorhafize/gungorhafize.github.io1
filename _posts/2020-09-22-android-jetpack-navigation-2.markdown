@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android Jetpack Navigation Bileşeni | SafeArgs - 2
+title: SafeArgs | Android Jetpack Navigation Bileşeni-2
 date: 2020-09-22 00:00:00 +0300
 description:
 img: nav2.png # Add image post (optional)
