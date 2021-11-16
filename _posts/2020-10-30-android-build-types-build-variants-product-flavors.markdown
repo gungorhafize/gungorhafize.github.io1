@@ -3,9 +3,9 @@ layout: post
 title: Build Types | Build Variants | Product Flavors
 date: 2020-09-22 00:00:00 +0300
 description:
-img: nav2.png # Add image post (optional)
+img: ekran.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Android, Jetpack, Navigation, SafeArgs, kotlin] # add tag
+tags: [Android, Build Types, Build Variants, Product Flavor, kotlin] # add tag
 ---
 
 There will be different stages of product release which is our android project and this case is released to the play store and these stages involves * development(debugging required) *testing of application * releasing it to the play store.
