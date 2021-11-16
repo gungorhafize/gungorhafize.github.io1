@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SafeArgs | Android Jetpack Navigation Bileşeni-2
+title: Build Types | Build Variants | Product Flavors
 date: 2020-09-22 00:00:00 +0300
 description:
 img: nav2.png # Add image post (optional)
@@ -8,74 +8,119 @@ fig-caption: # Add figcaption (optional)
 tags: [Android, Jetpack, Navigation, SafeArgs, kotlin] # add tag
 ---
 
-Bu bölümde Navigation bileşeni tarafından hedefler arasında kolayca veri aktarımı için sağlamak ve SafeArgs üzerine duracağız. Uygulamanızda farklı hedeflere giderken veri iletmek isteyebilirsiniz. 
-Verileri iletmek, global nesnelere referanslar kullanmak yerine, kodunuzda daha iyi kapsüllemeye izin verir, böylece farklı fragment veya activitylerin yalnızca kendilerini doğrudan ilgilendiren kısımları paylaşması gerekir. 
-Navigation bileşeni, Android'de farklı activityler arasında bilgi iletmek için kullanılan genel mekanizma olan "Bundles" ile argümanların iletilmesini sağlar. Bunu burada tamamen yapabiliriz, iletmek istediğimiz argümanlar için bir Bundle oluşturabilir ve sonra onları diğer tarafta Bundle'dan çıkarabiliriz. 
-Ancak Navigasyonun çok daha iyi bir özelliği var: **SafeArgs.** 
-SafeArgs, iletmek istediğiniz argümanlar hakkında navigation grafiğine bilgi girmenizi sağlayan bir gradle eklentisidir. 
-Ardından, bu argümanlar için bir Bundle oluşturmanın ve diğer taraftaki bu argümanları Bundle'dan çıkarmanın sıkıcı kısımlarını ele alan sizin için kod üretir. 
-Bundle'ı doğrudan kullanabiliriz ancak bunun yerine SafeArgs kullanmak Google tarafından önerilmektedir. Sadece yazması daha kolay olmakla kalmaz çok daha az kodla aynı zamanda argümanlarınız için tür güvenliği sağlayarak kodunuzu doğal olarak daha sağlam hale getirir. 
+There will be different stages of product release which is our android project and this case is released to the play store and these stages involves * development(debugging required) *testing of application * releasing it to the play store.
+So while developing an Android application, we ordinarily want to diverse types of APKs or you can tell different versions of APK during the development and release stage and testing stages.
+For instance, you might need one debug APK without having proguard file or one debug APK with proguard file or you may need one APK for your free users and one APK for your paid users 
+or you may need one APK for Android version 10 and above and one APK for Android version below 10 and there are numerous other probabilities.
+But the inquiry is, how you are going to create these numerous versions of your App. Are you going to have dissimilar projects for these versions or only one project is sufficient? Inasmuchas the code is going to stay just about the alike and just some APIs or some build configurations are going to modify? 
+So, how to reach this? This can be reachable by using Build Variants.
 
-## SafeArgs nasıl çalışır?
-Fab butona tıklayarak erişilen bir dialogda her biri ad, açıklama ve derecelendirme bilgilerine sahip ögelerin bir listesini gösteren bir uygulamamız olsun.
-Her bir ögeyi güncellemek için kodun, tıklanan öğeyle ilgili bilgileri dialoga iletmesi gerekir. Özellikle, ögenin id'sini liste fragementinden diyalog fragmentine geçirmesi gerekir, ardından diyalog bu id'yw sahip item için veritabanından bilgi alabilir ve ardından formu uygun şekilde doldurabilir.
-Veriyi(id) geçirmek için, SafeArgs kullanacağız. 
-Her şeyden önce, bazı kütüphane bağımlılıklarına ihtiyacımız var
+***Build Types and Build Variants***
 
-SafeArgs, navigationın diğer bölümleriyle aynı türde bir kütüphane modülü değildir; kendi başına bir API değil, kod üretecek bir gradle eklentisidir. Bu yüzden, onu bir gradle bağımlılığı olarak çekmem ve ardından gerekli kodu oluşturmak için eklentiyi derleme zamanında çalışacak şekilde uygulamamız gerekiyor.
+While building any Android application, we create various build types such as "debug" and "release".
+Therewital, we can create diverse product flavors for the same app, for example, the free product flavor for free users and the paid product flavor for the paid users. 
+So, Android Studio provides a property of Build Variants that can be thought of as a cartesian product of all your build types and all your product flavors.
+All you need to do is add different build types in your module-level build.gradle file and during development or production, you can merely select the Build Variant you want to test or release.
 
-Bunu önce projenin build.gradle dosyasının dependencies bloğuna ekledim: 
+By default, the Android Studio will produce "debug" and "release" Build Types for the project.
+the Build Variant choice can be found at the left part of the screen and this part is usually below Resource Manager within Android Studio or enter into to Build > Select Build Variant or just press cmd + shift + A and search for "Build Variant":
 
-```kotlin
-def nav_version = "2.3.0"
-classpath “androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version”
+image gelir
 
-```
+So, to change the Build Type, all you need to do is just select your Build Type from the Build Variant and next the project sync, you are ready. But how to compose a Build Type? Let's see.
 
-Muhtemelen bunun yerine kullanabileceğiniz daha yeni bir sürüm olacaktır. Ardından uygulamanın build.gradle dosyasına aşağıdaki komutu ekledim. Bu, SafeArgs çağrıları için kodun oluşturulmasına neden olan parçadır. 
+***Add Build Types***
 
-```kotlin
-apply plugin: "androidx.navigation.safeargs.kotlin"
+By default, whenever you create any project, after that Android Studio will create two build types for the project as "debug" and "release". But in order to add more build types, you need to add them to your module-level build.gradle file and under the buildTypes block. 
+The following is an example of the same:
 
-```
-Ardından, gerekli verileri oluşturmak ve iletmek için navigasyon grafiğine gittim. 
+android {
 
+    defaultConfig {
+        applicationId "com.variants"
+        versionCode 1
+        versionName "0.0.1"
+        ...
+    }
 
-<p align="center">
-  <img width="500" height="400" src="https://user-images.githubusercontent.com/33956266/140910270-e77120e8-89a2-4ecc-88f0-dbb2eb23e1da.PNG">
-</p>
+ buildTypes {
 
-Bir bağımsız değişkene ihtiyaç duyan hedef, hangi öğenin görüntüleneceği hakkında bilgi gerektiren itemEntryDialogFragment iletişim kutusudur. Bu hedefe tıklamak, sağdaki hedef özelliklerini gösterdi. 
+        debug {
+            versionNameSuffix ".dev"
+            debuggable true
 
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
-<p align="center">
-  <img width="800" height="500" src="https://user-images.githubusercontent.com/33956266/140911740-2fae694d-c1cb-4df9-92d0-7913f8fe0ebc.PNG">
-</p>
+        }
+        minifiedDebug {
+            versionNameSuffix ".dev"
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
-Bir hedefe tıklamak, o hedefin özellik(attribute) sayfasını getirir; burası ona iletmek için argümanlar girebileceğiniz yerdir. 
-Yeni bir arguments eklemek için Arguments bölümündeki + işaretine tıkladım, bu da aşağıdaki diyaloğu getirdi. Hangi item ögesinin görüntüleneceği hakkında bilgi vermek istedim, bu yüzden veri tabanındaki id type'a karşılık gelmesi için type olarak Long'u seçtim. 
-  
-  
-<p align="center">
-  <img width="300" height="300" src="https://user-images.githubusercontent.com/33956266/140912384-d5c49ec5-b745-4c68-9242-0d5dd480c710.PNG">
-</p>  
+        }
+    }
 
-Long'u seçtiğimizde Nullable ögesinin gri olduğunu görüyoruz. Bunun nedeni, izin verilen temel türlerin (Integer, Boolean, Float, and Long) Java programlama dili katmanında primitive data types (int, bool, float ve long) tarafından desteklenmesi ve bu türlerin boş olamaz durumudur.
-Bu nedenle, Kotlin'in Long türü null yapılabilir olsa da, temeldeki primitive long türü null olamaz, bu nedenle bu temel türleri kullanırken null olmayan türlerle sınırlandırılırız. 
+There are three build types as debug, release, and minifiedDebug in above code. The debug and release are the alike generated by Android Studio with some extra properties and minifiedDebug is the new build type that is a combination of proguard and debug. 
+If you attentively look at the code, at that case you will discover that in the defaultConfig block, the version name is "0.0.1" and in the debug and minifedDebug build type, we added a ".dev" suffix to the version name. This will distinguish the dev APK from the prod APK.
+Likewise, you can create the build type named noMinifedRelease that will be a compound of release + without proguard.
+There are definite states where you want to use the similar properties of some of your previous build types and add or change some properties to create a new build type. To do so you can use initWith:
 
-Unutulmaması gereken başka bir şey de, uygulamanın artık hem yeni bir öğe girmek, hem de mevcut bir öğeyi düzenlemek için dialog hedefini kullanmasıdır. Her zaman iletilecek bir itemId olmayacaktır; kullanıcı yeni bir öğe oluşturduğunda, kod görüntülenecek mevcut bir öge olmadığını belirtmelidir. Bu nedenle, -1 geçerli bir dizin olmadığı için, bu durumu belirtmek için iletişim kutusunda varsayılan değer için -1 girdim. Kod, herhangi bir bağımsız değişken sağlanmadan bu hedefe gittiğinde, varsayılan -1 değeri gönderilir ve alıcı kod, yeni bir item oluşturulduğuna karar vermek için bu değeri kullanır. 
-
-Bu adımdan sonra Rebuild project yaptığımızda proje files listesindeki “java (generated)” dosyalarına giderek oluşturulan kodun sonuçlarını görebilirsiniz. Alt klasörlerden birinin içinde, argümanı iletmek ve almak için oluşturulan yeni dosyaları görebilirsiniz. 
-ItemListDirections'da, dialog kutusuna gitmek için kullandığım API olan eşlik eden nesneyi görebilirsiniz. 
-
-```kotlin
-companion object {
-    fun actionItemListToItemEntryDialogFragment(
-        itemId: Long = -1L): NavDirections =
-        ActionItemListToItemEntryDialogFragment(itemId)
+newBuildType {
+    initWith debug
+    versionNameSuffix ".newbuild"
+    ...
 }
-```
 
-Navigate() metodunun orijinal olarak kullandığı bir Action kullanmak yerine, hem eylemi (bizi diyalog hedefine götürür) hem de daha önce oluşturulan argümanı içine alan NavDirections nesnesini kullandık. 
-  
-  
+The above is the code of a new build type name newBuildType.
+ Onwards we are using initWith debug, so it will contain all the properties of debug and we can add more properties to it or we can also edit some of the properties of debug and keep other things as it is. 
+In our state, we edited the versionNameSuffix and setted it with ".newbuild" instead of ".dev" that is there in the debug.
+Now, if we open the Build Variants option in the Android Studio, at that time we will detect 4 build variants as debug, release, minifiedDebug, and newBuildType. You can select any of these for your build.
+NOTE: If you are using Kotlin DSL in your build.gradle file, thereafter to add a build type, you need to use create("yourBuildTypeName") method in buildTypes block. 
+
+***Adding Product Flavors***
+
+You can think of Product Flavors as dissimilar variants of our app. i.e. if you are providing different content to different users but using the same code base, then you can add product flavors to your app.
+For instance, we can add product flavors such as "development" and "production", Inside these flavors you can add different API keys for the similar working flow.
+ For instance, we can add the development API in the development flavor and production API in the production flavor.
+To add a product flavor you need to add the productFlavors block inside the android block and also all product flavor must have some flavor dimension:
+
+android {
+    ...
+    defaultConfig {...}
+    buildTypes {
+        debug{...}
+        release{...}
+    }
+    
+    flavorDimensions "verse"
+    productFlavors {
+        development {
+            dimension "verse"
+            versionNameSuffix ".dev"
+        }
+        production {
+            dimension "verse"
+            versionNameSuffix ".prod"
+        }
+    }
+}
+
+The most beautiful part of product flavors is that they are consolidated with build types. For instance, if we have two build types named "debug" and "release" and two product flavors which has named "development" and "production", then your build variants will be:
+
+    developmentDebug
+    developmentRelease
+    productionDebug
+    productionRelease
+
+As a result, we can select any of the build variants you want for your build.
+
+You can create as a lot of product flavor dimensions as you want by separating each dimension from others using with comma(,) and use it by using dimension "dimensionName". For instance:
+
+flavorDimension "dimensionOne", "dimensionTwo", "dimensionThree"l
