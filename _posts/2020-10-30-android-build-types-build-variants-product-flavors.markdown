@@ -11,7 +11,7 @@ tags: [Android, Build Types, Build Variants, Product Flavor, kotlin] # add tag
 There will be different stages of product release that is our android project and these stages involves 
 * Development(debugging required) 
 * Testing of application 
-* Releasing application to the play store.
+* Releasing application to the play store
 So while developing an Android application, we ordinarily want to diverse types of APKs or you can tell different versions of APK during the development and release stage and testing stages.
 For instance, you might need one debug APK without having proguard file or one debug APK with proguard file or you may need one APK for your free users and one APK for your paid users or you may need one APK for Android version 10 and above and one APK for Android version below 10 and there are numerous other probabilities.
 But the inquiry is, how you are going to create these numerous versions of your App. Are you going to have dissimilar projects for these versions or only one project is sufficient?
