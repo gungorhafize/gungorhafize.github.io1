@@ -12,13 +12,14 @@ There will be different stages of product release that is our android project an
 * Development(debugging required) 
 * Testing of application 
 * Releasing application to the play store
+
 So while developing an Android application, we ordinarily want to diverse types of APKs or you can tell different versions of APK during the development and release stage and testing stages.
 For instance, you might need one debug APK without having proguard file or one debug APK with proguard file or you may need one APK for your free users and one APK for your paid users or you may need one APK for Android version 10 and above and one APK for Android version below 10 and there are numerous other probabilities.
 But the inquiry is, how you are going to create these numerous versions of your App. Are you going to have dissimilar projects for these versions or only one project is sufficient?
 Inasmuchas the code is going to stay just about the alike and just some APIs or some build configurations are going to modify? 
 So, how to reach this? This can be reachable by using Build Variants.
 
-*** Build Types and Build Variants ***
+***Build Types and Build Variants***
 
 While building any Android application, we create various build types such as "debug" and "release".
 Therewital, we can create diverse product flavors for the same app, for example, the free product flavor for free users and the paid product flavor for the paid users. 
@@ -128,5 +129,6 @@ The most beautiful part of product flavors is that they are consolidated with bu
 As a result, we can select any of the build variants you want for your build.
 
 You can create as a lot of product flavor dimensions as you want by separating each dimension from others using with comma(,) and use it by using dimension "dimensionName". For instance:
-
-   flavorDimension "dimensionOne", "dimensionTwo", "dimensionThree"
+```
+flavorDimension "dimensionOne", "dimensionTwo", "dimensionThree"
+```
