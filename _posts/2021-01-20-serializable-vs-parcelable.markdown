@@ -3,7 +3,7 @@ layout: post
 title: Serializable vs Parcelable? 
 date: 2020-09-22 00:00:00 +0300
 description:
-img: svsp.jpg # Add image post (optional)
+img: digital-id-google.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, Serializable, Parcelable, interface, kotlin, java] # add tag
 ---
@@ -64,7 +64,7 @@ Bu kullanım için application düzeyinde build.gradle dosyasına kotlin-parceli
 ## Serializable vs Parcelable
 
 <p align="center">
-  <img width="500" height="400" src="https://user-images.githubusercontent.com/33956266/142142414-cf49e08f-030f-4854-834b-73ca94da6f48.PNG">
+  <img width="500" height="400" src="https://user-images.githubusercontent.com/33956266/142990611-a0508fc2-2a72-4032-aa03-8966349c9185.jpg">
 </p>
 
 Yukarıda görülen Philippe Breault tarafından yürütülen testlerin sonuçları, Parcelable'ın Serializable'dan 10 kat daha hızlı olduğunu gösteriyor. Diğer bazı Google mühendisleri de bu açıklamanın arkasında duruyor. 
