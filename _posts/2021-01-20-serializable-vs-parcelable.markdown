@@ -78,3 +78,8 @@ Portreden landscape mod geçişleri veya rotate işlemlerini çok ağır hissett
 
 
 Şimdilik bu kadar. Tembel ve Üretken Kalın.
+
+Referans için [tık][id] 
+
+[id]: http://www.developerphil.com/parcelable-vs-serializable/  
+
