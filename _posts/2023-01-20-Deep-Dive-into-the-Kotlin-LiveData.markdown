@@ -3,7 +3,7 @@ layout: post
 title: Deep Dive into the Kotlin LiveData 🥂
 date: 2023-01-22 00:00:00 +0300
 description:
-img: LiveData.png # Add image post (optional)
+img: 1920x1008.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Android, LiveData, Kotlin, MutableLiveData, MediatorLiveData, transformations] # add tag
 ---
