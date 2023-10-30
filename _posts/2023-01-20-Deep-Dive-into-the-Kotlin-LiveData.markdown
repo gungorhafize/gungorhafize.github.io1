@@ -66,7 +66,7 @@ Additionally, there's a public accessible LiveData, named mergedData, which acts
 UI components can observe mergedData, and any alterations in liveDataOne or liveDataTwo will be automatically updated and reflected in the UI, providing real-time updates to the user interface based on changes in the observed LiveData sources.
 ## Using LiveData in Activity and Fragment 🖼️
 
-The difference between using LiveData in an Activity versus a Fragment lies on the lifecycle management.
+The difference between using LiveData in an Activity versus a Fragment lies on the lifecycle management..
 
 
 
